@@ -1,0 +1,23 @@
+.header {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__top {
+    background-color: $gray-light;
+  }
+  &__contact,
+  &__list {
+    display: flex;
+  }
+  &__navigation {
+    max-width: 626px;
+    width: 100%;
+  }
+  &__list {
+    justify-content: space-between;
+  }
+  &__link-home {
+    width: 187px;
+  }
+}
