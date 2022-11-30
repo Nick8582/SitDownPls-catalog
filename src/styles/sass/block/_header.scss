@@ -16,7 +16,7 @@
   &__wrap {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-gap: 32px 30px;
+    grid-gap: 30px 30px;
     align-items: center;
   }
 
@@ -92,13 +92,8 @@
 
   &__logo {
     grid-column-end: 2 span;
-    padding-top: 11px;
+    padding-top: 10px;
     outline: none;
-    border-bottom: 1px solid transparent;
-    transition: border-bottom $transition;
-    &:focus {
-      border-bottom: 1px solid $primary-shade;
-    }
   }
 
   &__bottom--menu {
@@ -112,16 +107,56 @@
     position: relative;
     display: grid;
     grid-column-end: 10 span;
-    grid-template-columns: 71% 29%;
+    grid-template-columns: 72% 28%;
   }
-  &__icons {
+  &__icon {
     position: absolute;
     left: 32px;
-    top: 32%;
+    top: 33%;
     z-index: 1;
     fill: $gray;
     outline: none;
     transition: fill $transition;
+  }
+  &__search {
+    position: relative;
+    padding: 22px 32px 18px 56px;
+    letter-spacing: 0.5px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent;
+    border-radius: 10px 0 0 10px;
+    background: $gray-light;
+    transition: background $transition, border $transition;
+  }
+  &__btn {
+    &-search {
+      padding: 0;
+      background: transparent;
+      cursor: pointer;
+      position: absolute;
+      right: 31.3%;
+      top: 24%;
+
+      width: 32px;
+      height: 32px;
+      border: 2px solid $primary;
+      border-radius: 50%;
+    }
+    &-right {
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        width: 9px;
+        height: 9px;
+        top: -4px;
+        right: -2px;
+        border-left: 2px solid $primary;
+        border-bottom: 2px solid $primary;
+        transform: rotate(-135deg);
+      }
+    }
   }
 }
 
