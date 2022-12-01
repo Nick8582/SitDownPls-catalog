@@ -38,7 +38,7 @@ header.header
             a.bottom--menu__link(href="#") Дисконт
           li.bottom-menu__item
             a.bottom--menu__link(href="#") Контакты
-      div.header__forms
+      .header__forms
         form.header__form
           svg.header__icon(width="20" height="20")
             use( xlink:href="images/sprite.svg#search" )
@@ -56,3 +56,13 @@ header.header
           option(value="Стулья") Стулья
           option(value="Столы") Столы
           option(value="Аксессуары") Аксессуары
+      .header__btn
+        button.header__profile(aria-label="Кнопка профиля")
+          svg.header__user
+            use( xlink:href="images/sprite.svg#profile" )
+        button.header__cart(aria-label="Корзина")
+          span.header__cart-sum 0
+          svg.header__cart-icon
+            use( xlink:href="images/sprite.svg#cart" )
+
+
