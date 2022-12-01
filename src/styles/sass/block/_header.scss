@@ -103,12 +103,22 @@
     padding-top: 10px;
     width: 100%;
   }
+
   &__forms {
     position: relative;
     display: grid;
     grid-column-end: 10 span;
     grid-template-columns: 72% 28%;
   }
+
+  &__form {
+    &:hover {
+      .header__search {
+        background: $md-gray;
+      }
+    }
+  }
+
   &__icon {
     position: absolute;
     left: 32px;
@@ -118,6 +128,7 @@
     outline: none;
     transition: fill $transition;
   }
+
   &__search {
     position: relative;
     padding: 22px 32px 18px 56px;
@@ -129,7 +140,11 @@
     background: $gray-light;
     transition: background $transition, border $transition;
   }
+
   &__btn {
+    grid-column-end: 2 span;
+    justify-self: flex-end;
+
     &-search {
       padding: 0;
       background: transparent;
@@ -143,8 +158,10 @@
       border: 2px solid $primary;
       border-radius: 50%;
     }
+
     &-right {
       position: relative;
+
       &::before {
         content: '';
         position: absolute;
@@ -156,6 +173,106 @@
         border-bottom: 2px solid $primary;
         transform: rotate(-135deg);
       }
+    }
+  }
+
+  &__profile,
+  &__cart {
+    border: none;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+    &:hover {
+      .header {
+        &__user,
+        &__cart-icon {
+          fill: $primary-light;
+        }
+      }
+    }
+    &:active {
+      .header {
+        &__user,
+        &__cart-icon {
+          fill: $primary-shade;
+        }
+      }
+    }
+    &:focus {
+      &:after {
+        opacity: 1;
+      }
+      .header {
+        &__user,
+        &__cart-icon {
+          fill: $white;
+        }
+      }
+    }
+  }
+
+  &__profile {
+    margin-right: 38px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -4px;
+      bottom: -4px;
+      left: -4px;
+      right: -4px;
+      z-index: -1;
+      background: $primary-light;
+      opacity: 0;
+      transition: opacity $transition;
+    }
+  }
+
+  &__cart {
+    &::after {
+      content: '';
+      position: absolute;
+      top: -4px;
+      bottom: -4px;
+      right: -4px;
+      left: -13px;
+      z-index: -1;
+      background: $primary-light;
+      opacity: 0;
+      transition: opacity $transition;
+    }
+  }
+
+  &__user,
+  &__cart-icon {
+    fill: $primary;
+    height: 28px;
+    transition: fill $transition;
+
+  }
+
+  &__user {
+    width: 28px;
+  }
+
+  &__cart {
+    &-sum {
+      position: absolute;
+      background: $secondary;
+      top: 6px;
+      left: -11px;
+      padding: 2px 4px;
+      border-radius: 50px;
+      font-size: 10px;
+      line-height: 10px;
+      align-items: center;
+      color: $white;
+    }
+
+    &-icon {
+      width: 30px;
     }
   }
 }
@@ -235,11 +352,13 @@
     display: flex;
     justify-content: space-between;
   }
+
   &__item {
     &:not(:last-child) {
       margin-right: 10px;
     }
   }
+
   &__link {
     position: relative;
     font-size: 16px;
@@ -248,6 +367,7 @@
     outline: none;
     letter-spacing: 0.5px;
     transition: color $transition;
+
     &::after {
       content: '';
       position: absolute;
@@ -260,12 +380,15 @@
       opacity: 0;
       transition: opacity $transition;
     }
+
     &:hover {
       color: $primary;
     }
+
     &:active {
       color: $primary-shade;
     }
+
     &:focus {
       &:after {
         opacity: 1;
@@ -310,15 +433,44 @@
     &__top--menu {
       grid-column-start: 1;
       grid-column-end: 7 span;
-      justify-content: flex-start;
+      justify-self: flex-start;
       order: 3;
       padding-top: 4px;
     }
+
     &__logo {
       grid-column-start: 1;
       grid-column-end: 2 span;
       order: 5;
       padding-top: 12px;
+    }
+
+    &__bottom--menu {
+      grid-column-start: 3;
+      grid-column-end: 7 span;
+      order: 6;
+      padding-top: 8px;
+      max-width: 700px;
+    }
+
+    &__forms {
+      grid-column-end: 9 span;
+      grid-template-columns: 69% 31%;
+      order: 7;
+    }
+
+    &__search {
+      padding-top: 19px;
+    }
+
+    &__btn {
+      grid-column-start: 8;
+      grid-column-end: 2 span;
+      order: 4;
+      &-search {
+        right: 34.8%;
+        top: 20%;
+      }
     }
   }
 }
