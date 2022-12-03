@@ -184,6 +184,7 @@
     cursor: pointer;
     position: relative;
     outline: none;
+
     &:hover {
       .header {
         &__user,
@@ -192,6 +193,7 @@
         }
       }
     }
+
     &:active {
       .header {
         &__user,
@@ -200,10 +202,12 @@
         }
       }
     }
+
     &:focus {
       &:after {
         opacity: 1;
       }
+
       .header {
         &__user,
         &__cart-icon {
@@ -344,6 +348,53 @@
   }
 }
 
+.burger--menu {
+  position: relative;
+  z-index: 10;
+  border: none;
+  color: $black;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  display: none;
+  width: 24px;
+  height: 24px;
+  outline: none;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: $primary;
+    transition: transform $transition, top $transition;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: $primary;
+    transition: transform $transition, bottom $transition;
+  }
+
+  &__icon {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 3px;
+    background: $primary;
+    transform: translateY(-50%);
+    transition: transform $transition;
+  }
+}
+
 .bottom--menu {
   &__list {
     list-style: none;
@@ -467,6 +518,7 @@
       grid-column-start: 8;
       grid-column-end: 2 span;
       order: 4;
+
       &-search {
         right: 34.8%;
         top: 20%;
@@ -496,20 +548,67 @@
       order: 2;
     }
 
-    &__submenu {
+    &__top--menu {
       grid-column-start: 1;
       grid-column-end: 6 span;
       order: 3;
       justify-self: auto;
       margin-bottom: 17px;
     }
+
+    &__logo {
+      grid-column-start: 3;
+      grid-column-end: 2 span;
+      order: 5;
+      padding-top: 5px;
+    }
+
+    &__burger--menu {
+      grid-column-start: 1;
+      grid-column-end: 1 span;
+      order: 4;
+    }
+
+    &__bottom--menu {
+      position: absolute;
+      top: 108px;
+      left: 0;
+      z-index: 9;
+      padding-top: 92px;
+      padding-left: 72px;
+      padding-bottom: 19px;
+      width: 100%;
+      height: 0;
+      background: $white;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity $transition, visibility $transition;
+    }
+    &__btn {
+      grid-column-start: 5;
+      grid-column-end: 2 span;
+      order: 6;
+      margin-top: 3px;
+      &-search {
+        right: 35.4%;
+      }
+    }
+    &__forms {
+      grid-column-start: 1;
+      grid-column-end: 6 span;
+      grid-template-columns: 70% 30%;
+      order: 7;
+    }
   }
-  .submenu {
+  .top--menu {
     &__item {
       &:not(:last-child) {
         margin-right: auto;
       }
     }
+  }
+  .burger--menu {
+    display: block;
   }
 }
 
