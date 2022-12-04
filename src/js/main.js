@@ -12,3 +12,10 @@ new Choices(fil, {
   shouldSort: !1,
   classNames: {containerOuter:"choices choices__filter",list:"choices__list--filter",flippedState:""}
 });
+const burger = document.querySelector('.burger--menu');
+const menu = document.querySelector('.bottom--menu');
+
+burger.addEventListener('click', () => {
+  menu.classList.toggle('active');
+  burger.classList.toggle('active');
+})
