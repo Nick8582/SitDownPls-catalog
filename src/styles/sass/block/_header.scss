@@ -1,7 +1,7 @@
 .header {
   position: relative;
   padding-top: 15px;
-  padding-bottom: 32px;
+  padding-bottom: 31px;
 
   &::after {
     content: '';
@@ -29,10 +29,6 @@
     .choices[data-type*=select-one] {
       width: 48%;
     }
-  }
-
-  &__text {
-    letter-spacing: 0.5px;
   }
 
   &__phone {
@@ -131,8 +127,8 @@
 
   &__search {
     position: relative;
-    padding: 22px 32px 18px 56px;
-    letter-spacing: 0.5px;
+    padding: 19px 32px 18px 56px;
+
     width: 100%;
     height: 100%;
     border: 2px solid transparent;
@@ -300,7 +296,7 @@
     position: relative;
     font-size: 14px;
     line-height: 1;
-    letter-spacing: 0.5px;
+
     color: $gray;
     outline: none;
     transition: color $transition;
@@ -434,7 +430,7 @@
     line-height: 1;
     color: $black;
     outline: none;
-    letter-spacing: 0.5px;
+
     transition: color $transition;
 
     &::after {
@@ -547,7 +543,7 @@
 
 @media (max-width: $table) {
   .header {
-    padding-bottom: 33px;
+    padding-bottom: 29px;
 
     &__wrap {
       grid-template-columns: repeat(6, 1fr);
@@ -690,6 +686,7 @@
 @media (max-width: $mobile) {
   .header {
     padding-top: 12px;
+    padding-bottom: 10px;
     &::after {
       top: 0;
       height: 50px;

@@ -5,8 +5,11 @@ html(lang="ru")
     meta(name="viewport" content="width=device-width, initial-scale=1")
     title= "sbp.ru"
     link(rel="stylesheet", href="./choices.min.css")
-    script(src='/choices.min.js' defer)
-    script(src="./app.js" defer)
+    link(rel="stylesheet", href="./swiper-bundle.min.css")
     link(rel="stylesheet", href="./styles/main.css")
+    script(src='./choices.min.js' defer)
+    script(src='./swiper-bundle.min.js' defer)
+    script(src='./app.js' defer)
   body
     include ./html/header.pug
+    include ./html/main.pug

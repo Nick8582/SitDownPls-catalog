@@ -19,3 +19,17 @@ burger.addEventListener('click', () => {
   menu.classList.toggle('active');
   burger.classList.toggle('active');
 })
+
+const swiper = new Swiper('.hero__slider', {
+
+  direction: 'horizontal',
+  loop: true,
+  // autoplay: {
+  //   delay: 3500,
+  //   disableOnInteraction: false,
+  // },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+});
