@@ -1,0 +1,210 @@
+.oferta {
+  &__container {
+    display: grid;
+    grid-template-areas:
+    "title btn"
+    "slider slider";
+    grid-gap: 25px;
+    grid-template-columns: 1fr 77px;
+  }
+  &__title {
+    grid-area: title;
+  }
+  &__btn {
+    grid-area: btn;
+    position: relative;
+    justify-items: end;
+  }
+  &__button {
+    &-prev,
+    &-next {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 2px solid $primary;
+      bottom: 0;
+      top: auto;
+      background: transparent;
+      outline: none;
+      transition: border $transition, background $transition;
+      &::after {
+        content: '';
+        position: absolute;
+        border-left: 2px solid $primary;
+        border-top: 2px solid $primary;
+        width: 10px;
+        height: 10px;
+        top: 33%;
+        transition: border $transition;
+      }
+      &.swiper {
+        &-button {
+          &-disabled {
+            opacity: 1;
+            border-color: $gray;
+            &:after {
+              opacity: 1;
+              border-color: $gray;
+            }
+          }
+        }
+      }
+      &:not(.swiper-button-disabled) {
+        &:hover {
+          background: $primary;
+          &:after {
+            border-color: $white;
+          }
+        }
+        &:focus {
+          background: $primary-light;
+          &:after {
+            border-color: $white;
+          }
+        }
+        &:active {
+          background: $primary-shade;
+          border-color: $primary-shade;
+          &:after {
+            border-color: $white;
+          }
+        }
+      }
+    }
+    &-prev {
+      left: 0;
+      &::after {
+        left: 37%;
+        transform: rotate(-45deg);
+      }
+    }
+    &-next {
+      right: 0;
+      &::after {
+        left: 24%;
+        transform: rotate(135deg);
+      }
+    }
+  }
+  &__slider {
+    width: 100%;
+    grid-area: slider;
+  }
+  &__card {
+    display: flex;
+    flex-direction: column;
+    max-width: 296px;
+    width: 100% !important;
+    border-radius: 10px;
+    background: $gray-light;
+    padding: 38px 30px 30px;
+    position: relative;
+    &-big {
+      max-width: 624px;
+    }
+  }
+}
+
+.card {
+  &__discont {
+    position: absolute;
+    top: 31px;
+    left: 0;
+    padding: 10px 0;
+    max-width: 82px;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 14px;
+    text-align: center;
+    color: $white;
+    background: $secondary;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -29px;
+      border: 18px solid transparent;
+      border-left: 12px solid $secondary;
+    }
+  }
+  &__picture {
+    display: flex;
+    align-items: flex-end;
+    align-self: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    max-height: 245px;
+    height: 100%;
+  }
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title {
+    color: $black;
+    margin-bottom: 20px;
+    max-width: 222px;
+    font-weight: 400;
+    font-size: 24px;
+    padding: 0;
+    line-height: 32px;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 23px;
+    &-new {
+      color: $secondary;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 23px;
+      margin-right: 30px;
+    }
+    &-old {
+      color: $gray;
+      font-size: 16px;
+      line-height: 23px;
+      margin-right: auto;
+      text-decoration-line: line-through;
+    }
+  }
+  &__btn {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background: transparent;
+    border: 2px $primary solid;
+    color: $primary;
+    font-size: 16px;
+    line-height: 16px;
+    border-radius: 10px;
+    max-width: 128px;
+    width: 100%;
+    padding: 16px;
+    outline: none;
+    transition: color $transition, background-color $transition, border $transition;
+    &:hover {
+      background: $primary;
+      color: $white;
+    }
+    &:focus {
+      background: $primary-light;
+      border-color: $primary;
+      color: $white;
+    }
+    &:active {
+      border-color: $primary-shade;
+      background: $primary-shade;
+      color: $white;
+    }
+  }
+  &__right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+}
+
+

@@ -139,7 +139,8 @@ const images = () => {
       'src/images/**/*.jpg',
       'src/images/**/*.png',
       'src/images/*.svg',
-      'src/images/**/*.jpeg'
+      'src/images/**/*.jpeg',
+      'src/images/**/*.webp'
     ])
     .pipe(image())
     .pipe(dest('dist/images'))

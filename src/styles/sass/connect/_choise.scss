@@ -116,6 +116,9 @@
         &:hover {
           border: 2px solid $primary;
         }
+        &:focus {
+          border-color: $primary;
+        }
       }
     }
     &:active {

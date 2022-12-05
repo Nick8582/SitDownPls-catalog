@@ -20,13 +20,24 @@ burger.addEventListener('click', () => {
   burger.classList.toggle('active');
 })
 
-const swiper = new Swiper('.hero__slider', {
+const swiperHero = new Swiper('.hero__slider', {
   autoplay: {delay: 4000},
   effect: "fade",
   fadeEffect: {crossFade: true},
-  loop: !0,
+  loop: true,
   pagination: {
     el: '.swiper-pagination-hero',
     clickable: true,
+  },
+});
+
+const swiperOferta = new Swiper('.oferta__slider', {
+  effect: 'horizontal',
+  slidesPerView: 3,
+  slidesPerGroup: 3,
+  spaceBetween: 32,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   },
 });
