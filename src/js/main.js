@@ -21,15 +21,12 @@ burger.addEventListener('click', () => {
 })
 
 const swiper = new Swiper('.hero__slider', {
-
-  direction: 'horizontal',
-  loop: true,
-  // autoplay: {
-  //   delay: 3500,
-  //   disableOnInteraction: false,
-  // },
+  autoplay: {delay: 4000},
+  effect: "fade",
+  fadeEffect: {crossFade: true},
+  loop: !0,
   pagination: {
-    el: '.swiper-pagination',
+    el: '.swiper-pagination-hero',
     clickable: true,
   },
 });
