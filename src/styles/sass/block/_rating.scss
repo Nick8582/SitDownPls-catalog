@@ -1,0 +1,6 @@
+.rating {
+  &__title {
+    grid-column-start: 1;
+    grid-column-end: 4 span;
+  }
+}

@@ -58,21 +58,15 @@
     }
 
     &-one {
-      background-repeat: no-repeat;
-      background-size: cover;
-      background: url('../images/hero-1.jpg');
+      background: url('../images/hero-1.jpg') center/cover no-repeat;
     }
 
     &-two {
-      background-repeat: no-repeat;
-      background-size: cover;
-      background: url('../images/hero-2.jpg');
+      background: url('../images/hero-2.jpg') center/cover no-repeat;
     }
 
     &-three {
-      background-repeat: no-repeat;
-      background-size: cover;
-      background: url('../images/hero-3.jpg');
+      background: url('../images/hero-3.jpg') center/cover no-repeat;
     }
   }
   &-pagination {
@@ -96,21 +90,15 @@
   .swiper {
     &-slide {
       &-one {
-        background-repeat: no-repeat;
-        background-size: cover;
-        background: url('../images/hero-1-1024.jpg');
+        background: url('../images/hero-1-1024.jpg') center/cover no-repeat;
       }
 
       &-two {
-        background-repeat: no-repeat;
-        background-size: cover;
-        background: url('../images/hero-2-1024.jpg');
+        background: url('../images/hero-2-1024.jpg') center/cover no-repeat;
       }
 
       &-three {
-        background-repeat: no-repeat;
-        background-size: cover;
-        background: url('../images/hero-3-1024.jpg');
+        background: url('../images/hero-3-1024.jpg') center/cover no-repeat;
       }
     }
   }
@@ -120,21 +108,15 @@
   .swiper {
     &-slide {
       &-one {
-        background-repeat: no-repeat;
-        background-size: cover;
-        background: url('../images/hero-1-768.jpg');
+        background: url('../images/hero-1-768.jpg') center/cover no-repeat;
       }
 
       &-two {
-        background-repeat: no-repeat;
-        background-size: cover;
-        background: url('../images/hero-2-768.jpg');
+        background: url('../images/hero-2-768.jpg') center/cover no-repeat;
       }
 
       &-three {
-        background-repeat: no-repeat;
-        background-size: cover;
-        background: url('../images/hero-3-768.jpg');
+        background: url('../images/hero-3-768.jpg') center/cover no-repeat;
       }
     }
   }
@@ -153,8 +135,9 @@
 
 @media (max-width: $mobile) {
   .hero {
+    margin-bottom: 45px;
     &__slider {
-      padding-bottom: 62px;
+      padding-bottom: 0;
     }
     &__title {
       margin-bottom: 151px;

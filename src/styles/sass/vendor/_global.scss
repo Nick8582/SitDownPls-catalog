@@ -62,5 +62,9 @@ main {
 @media (max-width: $mobile) {
   .container {
     padding: 0 12px;
+    &__title {
+      font-size: 24px;
+      line-height: 24px;
+    }
   }
 }

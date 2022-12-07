@@ -29,15 +29,29 @@ const swiperHero = new Swiper('.hero__slider', {
     el: '.swiper-pagination-hero',
     clickable: true,
   },
+
 });
 
 const swiperOferta = new Swiper('.oferta__slider', {
   effect: 'horizontal',
-  slidesPerView: 3,
-  slidesPerGroup: 3,
-  spaceBetween: 32,
+  slidesPerView: 1,
+  slidesPerGroup: 1,
+  spaceBetween: 10,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+  breakpoints: {
+    501: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 36,
+    },
+    993: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+      spaceBetween: 32
+    },
+  },
+  a11y: false,
 });

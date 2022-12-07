@@ -1,0 +1,135 @@
+.card {
+  &__discont {
+    position: absolute;
+    top: 31px;
+    left: 0;
+    padding: 10px 0;
+    max-width: 82px;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 14px;
+    text-align: center;
+    color: $white;
+    background: $secondary;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -29px;
+      border: 18px solid transparent;
+      border-left: 12px solid $secondary;
+    }
+  }
+
+  &__picture {
+    display: flex;
+    align-items: flex-end;
+    align-self: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    max-height: 245px;
+    height: 100%;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    color: $black;
+    margin-bottom: 20px;
+    max-width: 222px;
+    font-weight: 400;
+    font-size: 24px;
+    padding: 0;
+    line-height: 32px;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 23px;
+
+    &-new {
+      color: $secondary;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 23px;
+      margin-right: 30px;
+    }
+
+    &-old {
+      color: $gray;
+      font-size: 16px;
+      line-height: 23px;
+      margin-right: auto;
+      text-decoration-line: line-through;
+    }
+  }
+
+  &__btn {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background: transparent;
+    border: 2px $primary solid;
+    color: $primary;
+    font-size: 16px;
+    line-height: 16px;
+    border-radius: 10px;
+    max-width: 128px;
+    width: 100%;
+    padding: 16px;
+    outline: none;
+    transition: color $transition, background-color $transition, border $transition;
+
+    &:hover {
+      background: $primary;
+      color: $white;
+    }
+
+    &:focus {
+      background: $primary-light;
+      border-color: $primary;
+      color: $white;
+    }
+
+    &:active {
+      border-color: $primary-shade;
+      background: $primary-shade;
+      color: $white;
+    }
+  }
+
+  &__right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+}
+
+@media (max-width: $table-h) {
+  .card {
+    &__left {
+      padding: 0 10px;
+    }
+    &__right {
+      display: none;
+    }
+
+    &__picture {
+      align-items: center;
+    }
+  }
+}
+
+@media (max-width: $table) {
+  .card {
+    &__picture {
+      margin-bottom: 12px;
+    }
+  }
+}
