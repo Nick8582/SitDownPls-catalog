@@ -1,4 +1,32 @@
 .card {
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    &--rating {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 30px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    padding: 38px 30px 30px;
+    position: relative;
+    border-radius: 10px;
+    background: $gray-light;
+    &--rating {
+      width: 100%;
+      min-height: 420px;
+      position: relative;
+      padding: 35px 10px 30px;
+    }
+  }
+
   &__discont {
     position: absolute;
     top: 31px;
@@ -23,6 +51,26 @@
     }
   }
 
+  &__rating {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 82px;
+    padding-left:52px;
+    color: $secondary;
+    font-size: 16px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 1px;
+      left: -3px;
+      height: 15px;
+      width: 100%;
+      background: url('../images/sprite.svg#star') 100% no-repeat;
+    }
+
+  }
+
   &__picture {
     display: flex;
     align-items: flex-end;
@@ -31,11 +79,18 @@
     margin-bottom: 16px;
     max-height: 245px;
     height: 100%;
+    &--rating {
+      height: 153px;
+    }
   }
 
   &__bottom {
     display: flex;
     justify-content: space-between;
+  }
+
+  &__discription {
+    padding: 0 20px;
   }
 
   &__title {
@@ -46,6 +101,10 @@
     font-size: 24px;
     padding: 0;
     line-height: 32px;
+    &--rating {
+      max-width: 100%;
+      margin-bottom: 21px;
+    }
   }
 
   &__price {
@@ -68,6 +127,11 @@
       margin-right: auto;
       text-decoration-line: line-through;
     }
+
+    &-rating {
+      color: $gray-shade;
+      margin-bottom: 2px;
+    }
   }
 
   &__btn {
@@ -85,6 +149,11 @@
     padding: 16px;
     outline: none;
     transition: color $transition, background-color $transition, border $transition;
+
+    &--rating {
+      padding-top: 17px;
+      padding-bottom: 18px;
+    }
 
     &:hover {
       background: $primary;
@@ -116,6 +185,7 @@
     &__left {
       padding: 0 10px;
     }
+
     &__right {
       display: none;
     }

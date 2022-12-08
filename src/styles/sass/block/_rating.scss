@@ -1,6 +1,16 @@
 .rating {
+  margin-bottom: 30px;
+  &__cards {
+    display: flex;
+    flex-direction: column;
+  }
   &__title {
     grid-column-start: 1;
     grid-column-end: 4 span;
+    margin-bottom: 32px;
+  }
+  &__btn {
+    max-width: 298px;
+    margin: 0 auto;
   }
 }
