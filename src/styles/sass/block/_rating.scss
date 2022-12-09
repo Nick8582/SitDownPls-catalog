@@ -14,3 +14,11 @@
     margin: 0 auto;
   }
 }
+
+@media (max-width: $table) {
+  .rating {
+    &__title {
+      margin-bottom: 28px;
+    }
+  }
+}

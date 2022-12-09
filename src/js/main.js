@@ -55,3 +55,32 @@ const swiperOferta = new Swiper('.oferta__slider', {
   },
   a11y: false,
 });
+
+const rating = document.querySelector('.rating');
+const cardDisplay = rating.querySelectorAll('.card__wrap');
+let winWidth = window.screen.width;
+
+const resize = () => {
+  winWidth = window.screen.width
+  if(winWidth > 1309) {
+    for(let i = 0; i < cardDisplay.length; i++) {
+      cardDisplay[i].style.display = 'block';
+
+    }
+  } else if(winWidth < 1310) {
+    for(let i = 0; i < cardDisplay.length; i++) {
+      if( i > 5 ) {
+        cardDisplay[i].style.display = 'none';
+      }
+    }
+  }
+}
+
+
+window.addEventListener('resize', () => {
+  resize()
+});
+
+(() => {
+  resize();
+})()

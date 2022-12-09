@@ -19,6 +19,7 @@
     position: relative;
     border-radius: 10px;
     background: $gray-light;
+
     &--rating {
       width: 100%;
       min-height: 420px;
@@ -56,9 +57,10 @@
     top: 30px;
     left: 0;
     width: 82px;
-    padding-left:52px;
+    padding-left: 52px;
     color: $secondary;
     font-size: 16px;
+
     &::before {
       content: "";
       position: absolute;
@@ -79,6 +81,7 @@
     margin-bottom: 16px;
     max-height: 245px;
     height: 100%;
+
     &--rating {
       height: 153px;
     }
@@ -101,6 +104,7 @@
     font-size: 24px;
     padding: 0;
     line-height: 32px;
+
     &--rating {
       max-width: 100%;
       margin-bottom: 21px;
@@ -182,8 +186,15 @@
 
 @media (max-width: $table-h) {
   .card {
+    &__list {
+      &--rating {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
     &__left {
       padding: 0 10px;
+
     }
 
     &__right {
@@ -192,14 +203,96 @@
 
     &__picture {
       align-items: center;
+
+      &--rating {
+        align-items: flex-end;
+      }
     }
   }
 }
 
 @media (max-width: $table) {
   .card {
+    &__list {
+      &--rating {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 32px;
+      }
+    }
+
+    &__item {
+      &--rating {
+        min-height: 420px;
+        padding-top: 38px;
+      }
+    }
+
     &__picture {
       margin-bottom: 12px;
+
+      &--rating {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .card {
+    &__list {
+      &--rating {
+        grid-gap: 16px;
+        margin-bottom: 34px;
+      }
+    }
+
+    &__item {
+      &--rating {
+        min-height: 270px;
+        padding: 16px;
+      }
+    }
+
+    &__rating {
+      font-size: 14px;
+      top: 15px;
+      padding-left: 33px;
+
+      &::before {
+        top: -1px;
+        left: -19px;
+      }
+    }
+
+    &__picture {
+      &--rating {
+        height: max(22vw, 73px);
+        margin-bottom: 19px;
+      }
+    }
+
+    &__discription {
+      padding: 0;
+    }
+
+    &__title {
+      &--rating {
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 19px;
+      }
+    }
+
+    &__price {
+      &-modification {
+        margin-bottom: 13px;
+      }
+    }
+
+    &__btn {
+      &--rating {
+        padding: 10px;
+      }
     }
   }
 }
