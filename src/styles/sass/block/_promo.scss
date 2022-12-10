@@ -1,0 +1,25 @@
+.promo {
+  background-position: center;
+  background-size: cover;
+  background: url("../images/promo-1.jpg") no-repeat;
+  margin-bottom: 30px;
+  padding: 160px 0 150px;
+  background-color: $gray;
+  &__title {
+    margin: 0;
+    padding: 0;
+    font-size: 60px;
+    font-family: 'Playfair Display', Arial;
+    font-weight: 900;
+    line-height: 1;
+    color: $gold;
+    margin-bottom: 6px;
+  }
+  &__subtitle {
+    max-width: 500px;
+    font-size: 48px;
+    line-height: 58px;
+    margin-bottom: 48px;
+    color: $white;
+  }
+}
