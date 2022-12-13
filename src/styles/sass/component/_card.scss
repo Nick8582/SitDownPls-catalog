@@ -138,45 +138,6 @@
     }
   }
 
-  &__btn {
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    background: transparent;
-    border: 2px $primary solid;
-    color: $primary;
-    font-size: 16px;
-    line-height: 16px;
-    border-radius: 10px;
-    max-width: 128px;
-    width: 100%;
-    padding: 16px;
-    outline: none;
-    transition: color $transition, background-color $transition, border $transition;
-
-    &--rating {
-      padding-top: 17px;
-      padding-bottom: 18px;
-    }
-
-    &:hover {
-      background: $primary;
-      color: $white;
-    }
-
-    &:focus {
-      background: $primary-light;
-      border-color: $primary;
-      color: $white;
-    }
-
-    &:active {
-      border-color: $primary-shade;
-      background: $primary-shade;
-      color: $white;
-    }
-  }
-
   &__right {
     display: flex;
     justify-content: flex-end;

@@ -38,8 +38,8 @@ const swiperOferta = new Swiper('.oferta__slider', {
   slidesPerGroup: 1,
   spaceBetween: 10,
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.oferta__button-next',
+    prevEl: '.oferta__button-prev',
   },
   breakpoints: {
     501: {
@@ -54,6 +54,17 @@ const swiperOferta = new Swiper('.oferta__slider', {
     },
   },
   a11y: false,
+});
+
+const swiperSpecial = new Swiper('.special__slider', {
+  effect: 'horizontal',
+  slidesPerView: 2,
+  slidesPerGroup: 2,
+  spaceBetween: 32,
+  navigation: {
+    nextEl: '.special__button-next',
+    prevEl: '.special__button-prev',
+  }
 });
 
 const rating = document.querySelector('.rating');

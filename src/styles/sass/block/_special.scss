@@ -1,0 +1,45 @@
+.special {
+  margin-bottom: 70px;
+
+  &__container {
+    display: grid;
+    grid-gap: 25px;
+    grid-template-areas: "title btn"
+      "slider slider";
+    grid-template-columns: 1fr 77px;
+  }
+
+  &__title {
+    grid-area: title;
+  }
+
+  &__slider {
+    width: 100%;
+    grid-area: slider;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background-color: $gray-light;
+    border-radius: 10px;
+  }
+
+  &__picture {
+    margin: -30px -30px 28px;
+  }
+
+  &__text {
+    margin: 0 0 37px;
+    padding: 0;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 33px;
+    color: $black;
+  }
+
+  &__btn {
+    margin-top: auto;
+  }
+}
