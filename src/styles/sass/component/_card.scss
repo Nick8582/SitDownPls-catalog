@@ -7,8 +7,8 @@
     &--rating {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      grid-gap: 30px;
-      margin-bottom: 30px;
+      grid-gap: 32px;
+      margin-bottom: 32px;
     }
   }
 
@@ -30,9 +30,9 @@
 
   &__discont {
     position: absolute;
-    top: 31px;
+    top: 32px;
     left: 0;
-    padding: 10px 0;
+    padding: 10px 0 9px;
     max-width: 82px;
     width: 100%;
     font-size: 14px;
@@ -46,9 +46,9 @@
       content: '';
       position: absolute;
       top: 0;
-      right: -29px;
-      border: 18px solid transparent;
-      border-left: 12px solid $secondary;
+      right: -26px;
+      border: 16px solid transparent;
+      border-left: 10px solid $secondary;
     }
   }
 
@@ -83,7 +83,7 @@
     height: 100%;
 
     &--rating {
-      height: 153px;
+      height: 156px;
     }
   }
 
@@ -114,7 +114,7 @@
   &__price {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 23px;
+    margin-bottom: 22px;
 
     &-new {
       color: $secondary;
@@ -136,6 +136,10 @@
       color: $gray-shade;
       margin-bottom: 2px;
     }
+
+    &-modification {
+      margin-bottom: 23px;
+    }
   }
 
   &__right {
@@ -151,6 +155,10 @@
       &--rating {
         grid-template-columns: repeat(3, 1fr);
       }
+    }
+
+    &__discount {
+      top: 31px;
     }
 
     &__left {

@@ -50,7 +50,10 @@ const swiperOferta = new Swiper('.oferta__slider', {
     993: {
       slidesPerView: 3,
       slidesPerGroup: 3,
-      spaceBetween: 32
+      spaceBetween: 33,
+    },
+    1311: {
+      spaceBetween: 32,
     },
   },
   a11y: false,

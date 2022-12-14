@@ -1,7 +1,7 @@
 .category {
   margin-bottom: 70px;
   &__title {
-    margin-bottom: 27px;
+    margin-bottom: 25px;
   }
 
   &__list {
@@ -15,7 +15,7 @@
 
   &__item {
     grid-column-end: span 2;
-    padding: 27px 30px 30px;
+    padding: 28px 30px;
     background-color: $gray-light;
     border-radius: 10px;
     display: flex;
@@ -30,11 +30,10 @@
   &__sub {
     &-list {
       list-style: none;
-      margin: 0;
+      margin: 0 0 13px;
       padding: 0;
       display: flex;
       flex-wrap: wrap;
-      margin-bottom: 15px;
     }
 
     &-item {
@@ -44,7 +43,12 @@
     }
   }
   &__name {
-    margin-bottom: 28px;
+    margin: 0 0 30px;
+    padding: 0;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 33px;
+    color: $black;
   }
 
   &__link {
@@ -67,6 +71,7 @@
       max-width: 108px;
       outline: none;
       margin-top: auto;
+      align-items: center;
 
       &:focus {
         .category {
@@ -172,13 +177,13 @@
 
   &__picture {
     margin-left: -30px;
-    max-height: 307px;
+    max-height: 308px;
     width: 100%;
     margin-bottom: 30px;
   }
 
   &__img {
-    height: 100%;
+    max-height: 100%;
     width: auto;
   }
 

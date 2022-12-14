@@ -26,7 +26,7 @@
     width: 100% !important;
     border-radius: 10px;
     background: $gray-light;
-    padding: 38px 30px 30px;
+    padding: 39px 30px 30px;
     position: relative;
 
     &-big {
@@ -37,6 +37,9 @@
 
 @media (max-width: $table-h) {
   .oferta {
+    &__container {
+      grid-gap: 28px;
+    }
     &__card {
       max-width: 100%;
       width: 31% !important;

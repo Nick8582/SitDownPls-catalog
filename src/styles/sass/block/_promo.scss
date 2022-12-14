@@ -6,14 +6,13 @@
   padding: 160px 0 150px;
   background-color: $gray;
   &__title {
-    margin: 0;
+    margin: 0 0 6px;
     padding: 0;
     font-size: 60px;
     font-family: 'Playfair Display', Arial;
     font-weight: 900;
     line-height: 1;
     color: $gold;
-    margin-bottom: 6px;
   }
   &__subtitle {
     max-width: 500px;
@@ -21,6 +20,9 @@
     line-height: 58px;
     margin-bottom: 48px;
     color: $white;
+  }
+  &__btn {
+    padding: 19px 0;
   }
 }
 
