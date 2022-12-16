@@ -1,0 +1,31 @@
+.contact {
+  margin-bottom: 70px;
+  &__container {
+    background: url('../images/contact-background.png') right 2% center no-repeat;
+  }
+  &__title {
+    margin-bottom: 9px;
+  }
+  &__description {
+    margin-bottom: 16px;
+    padding: 0;
+    max-width: 585px;
+    font-size: 14px;
+    line-height: 19px;
+    color: $gray-shade;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    max-width: 625px;
+  }
+  &__input {
+    border: 1px solid transparent;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    padding: 6px 17px;
+    background: $gray-light;
+    font-size: 16px;
+    line-height: 40px;
+  }
+}

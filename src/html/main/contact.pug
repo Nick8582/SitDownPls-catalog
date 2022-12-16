@@ -4,12 +4,12 @@ section.contact
     p.contact__description Безусловно, новая модель организационной деятельности в значительной степени обусловливает важность распределения внутренних резервов и ресурсов.
       button.contact__toltip
     form.contact__form
-      input.container__input
-      input.container__input
-      input.container__input
-      button.btn__primary.contact__btn
+      input.contact__input(placeholder="Как вас зовут?" name="name" type="text")
+      input.contact__input(placeholder="Ваш телефон" name="phone" type="tel")
+      input.contact__input(placeholder="Ваш e-mail" name="email" type="email")
+      button.btn__primary.contact__btn Отправить
       label.contact__label
-        input.contact__check.castom__check
+        input.contact__check.castom__check(type="checkbox" checked="true")
         span.contact__check-description Принимаю
-          a.contact__link(href='#') пользовательское соглашение
+          a.contact__link(href='#')  пользовательское соглашение
 
