@@ -97,4 +97,8 @@ window.addEventListener('resize', () => {
 
 (() => {
   resize();
+  tippy('.tooltip-js', {
+    theme: 'project',
+    maxWidth: 157,
+  });
 })()

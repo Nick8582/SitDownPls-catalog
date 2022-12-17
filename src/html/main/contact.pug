@@ -2,14 +2,16 @@ section.contact
   .container.contact__container
     h2.contact__title.container__title Мы всегда вам рады!
     p.contact__description Безусловно, новая модель организационной деятельности в значительной степени обусловливает важность распределения внутренних резервов и ресурсов.
-      button.contact__toltip
+      button.contact__tooltip.tooltip-js(data-tippy-content="Реплицированные с зарубежных источников, исследования формируют глобальную сеть.")
+        svg.contact__tooltip-icon(width="14" height="14")
+          use( xlink:href="images/sprite.svg#tooltip" )
     form.contact__form
       input.contact__input(placeholder="Как вас зовут?" name="name" type="text")
       input.contact__input(placeholder="Ваш телефон" name="phone" type="tel")
       input.contact__input(placeholder="Ваш e-mail" name="email" type="email")
       button.btn__primary.contact__btn Отправить
-      label.contact__label
-        input.contact__check.castom__check(type="checkbox" checked="true")
-        span.contact__check-description Принимаю
-          a.contact__link(href='#')  пользовательское соглашение
+      label.contact__label.custom__check-label(for="politic")
+        input.contact__check.custom__check(type="checkbox" checked="true" id="politic")
+        span.contact__check-description.custom__checkbox Принимаю
+          a.contact__link(href='#') пользовательское соглашение
 
