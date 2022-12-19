@@ -4,14 +4,19 @@
 @import "vendor/font";
 @import "vendor/global";
 @import "vendor/custom";
-@import "block/header";
+
 @import "connect/choise";
+
 @import "component/btn";
+@import "component/card";
+
+@import "block/header";
 @import "block/hero";
 @import "block/oferta";
 @import "block/rating";
-@import "component/card";
 @import "block/promo";
 @import "block/category";
 @import "block/special";
 @import "block/contact";
+@import "block/footer";
+

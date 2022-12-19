@@ -15,7 +15,7 @@
 
   &__item {
     grid-column-end: span 2;
-    padding: 28px 30px;
+    padding: 26px 30px 25px;
     background-color: $gray-light;
     border-radius: 10px;
     display: flex;
@@ -24,6 +24,9 @@
     &:first-child,
     &:nth-child(2) {
       grid-column-end: span 3;
+      max-height: 511px;
+      min-height: 511px;
+      height: 100%;
     }
   }
 
@@ -64,7 +67,7 @@
     &-catalog {
       color: $primary;
       font-size: 16px;
-      line-height: 19px;
+      line-height: 30px;
       font-weight: 700;
       display: flex;
       justify-content: space-between;
@@ -179,7 +182,7 @@
     margin-left: -30px;
     max-height: 308px;
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 22px;
   }
 
   &__img {
@@ -224,7 +227,7 @@
         }
 
         .category__picture {
-          margin-bottom: 32px;
+          margin-bottom: 10px;
         }
       }
 
@@ -263,7 +266,7 @@
     }
 
     &__picture {
-      margin-bottom: 34px;
+      margin-bottom: 27px;
       width: calc(100% + 60px);
     }
   }

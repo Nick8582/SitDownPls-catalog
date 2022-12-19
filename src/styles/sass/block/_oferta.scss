@@ -37,14 +37,12 @@
 
 @media (max-width: $table-h) {
   .oferta {
-    &__container {
-      grid-gap: 28px;
-    }
     &__card {
       max-width: 100%;
       width: 31% !important;
       padding: 66px 20px 30px;
     }
+
   }
 }
 

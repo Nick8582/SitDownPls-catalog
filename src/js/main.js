@@ -61,12 +61,19 @@ const swiperOferta = new Swiper('.oferta__slider', {
 
 const swiperSpecial = new Swiper('.special__slider', {
   effect: 'horizontal',
-  slidesPerView: 2,
-  slidesPerGroup: 2,
+  slidesPerView: 3,
+  slidesPerGroup: 3,
   spaceBetween: 32,
   navigation: {
     nextEl: '.special__button-next',
     prevEl: '.special__button-prev',
+  },
+  breakpoints: {
+    1311: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 32,
+    }
   }
 });
 
@@ -79,7 +86,6 @@ const resize = () => {
   if(winWidth > 1309) {
     for(let i = 0; i < cardDisplay.length; i++) {
       cardDisplay[i].style.display = 'block';
-
     }
   } else if(winWidth < 1310) {
     for(let i = 0; i < cardDisplay.length; i++) {
@@ -88,6 +94,7 @@ const resize = () => {
       }
     }
   }
+  console.log(winWidth)
 }
 
 

@@ -1,5 +1,5 @@
 .contact {
-  margin-bottom: 70px;
+  margin-bottom: 72px;
   &__container {
     background: url('../images/contact-background.png') right 2% center no-repeat;
   }
@@ -7,7 +7,7 @@
     margin-bottom: 9px;
   }
   &__description {
-    margin-bottom: 16px;
+    margin-bottom: 17px;
     padding: 0;
     max-width: 585px;
     font-size: 14px;
@@ -42,8 +42,8 @@
     line-height: 40px;
   }
   &__btn {
-    max-width: 160px;
-    padding: 16px 0 15px;
+    max-width: 159px;
+    padding: 16px 0;
     margin-bottom: 13px;
   }
   &__label {
@@ -51,5 +51,20 @@
   }
   &__link {
     text-decoration: underline;
+  }
+}
+
+@media (max-width: $table-h) {
+  .contact {
+    &__container {
+      background: url('../images/contact-background-1024.png') right 7% center no-repeat;
+    }
+    &__description {
+      max-width: 400px;
+      margin-bottom: 16px;
+    }
+    &__form {
+      max-width: 400px;
+    }
   }
 }

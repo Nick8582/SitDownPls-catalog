@@ -1,4 +1,105 @@
 .footer {
-  padding: 24px 0;
+  padding: 22px 0;
   background: $md-gray;
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 26px 30px;
+  }
+  &__logo {
+    grid-column-start: 1;
+    grid-column-end: 2 span;
+    order: 1;
+  }
+
+  &__social {
+    grid-column-start: 1;
+    grid-column-end: 2 span;
+    order: 3;
+    align-self: flex-end;
+  }
+
+  &__nav {
+    padding-top: 6px;
+    grid-column-start: 5;
+    grid-column-end: 8 span;
+    grid-row-start: 1;
+    grid-row-end: 2 span;
+    order: 2;
+  }
+}
+
+.social {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  &__item {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+  &__icon {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    &:nth-child(1) {
+      margin-right: -21px;
+    }
+    &:nth-child(3) {
+      margin-right: 12px;
+    }
+  }
+  &__item {
+    font-size: 16px;
+    line-height: 1;
+    color: $black;
+    &:not(:last-child) {
+      margin-bottom: 7px;
+    }
+  }
+  &__link {
+    text-decoration: none;
+    color: $gray;
+    font-size: 14px;
+
+  }
+}
+
+.copyright {
+  background: $gray-light;
+  &__container {
+    color: $gray;
+    text-align: center;
+    padding: 3px 0;
+    font-size: 14px;
+    line-height: 19px;
+  }
+  &__text {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+}
+
+
+@media (max-width: $table-h) {
+  .footer {
+    &__container {
+      grid-template-columns: repeat(9, 1fr);
+    }
+    &__nav {
+      grid-column-start: 3;
+      grid-column-end: 7 span;
+    }
+  }
 }

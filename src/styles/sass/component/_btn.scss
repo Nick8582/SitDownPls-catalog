@@ -152,3 +152,12 @@
     }
   }
 }
+
+
+@media (max-width: $table-h) {
+  .btn {
+    &__border {
+      padding: 17px 0;
+    }
+  }
+}

@@ -154,11 +154,19 @@
     &__list {
       &--rating {
         grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 31px;
       }
     }
 
-    &__discount {
-      top: 31px;
+    &__discont {
+      top: 30px;
+      padding: 10px 0;
+      &:after {
+        content: '';
+        right: -27px;
+        border: 17px solid transparent;
+        border-left: 10px solid $secondary;
+      }
     }
 
     &__left {
@@ -172,9 +180,21 @@
 
     &__picture {
       align-items: center;
+      margin-bottom: 14px;
 
       &--rating {
         align-items: flex-end;
+        margin-bottom: 15px;
+      }
+    }
+    &__title {
+      &--rating {
+        margin-bottom: 23px;
+      }
+    }
+    &__price {
+      &-modification {
+        margin-bottom: 22px;
       }
     }
   }
