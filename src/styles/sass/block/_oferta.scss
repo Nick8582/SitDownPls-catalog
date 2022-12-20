@@ -23,7 +23,6 @@
     display: flex;
     flex-direction: column;
     max-width: 296px;
-    width: 100% !important;
     border-radius: 10px;
     background: $gray-light;
     padding: 39px 30px 30px;
@@ -39,7 +38,6 @@
   .oferta {
     &__card {
       max-width: 100%;
-      width: 31% !important;
       padding: 66px 20px 30px;
     }
 
@@ -49,9 +47,9 @@
 @media (max-width: $table) {
   .oferta {
     &__card {
-      width: 47% !important;
       padding-top: 70px;
     }
+
   }
 }
 
@@ -69,10 +67,6 @@
       max-width: 78px;
       width: 100%;
       padding-top: 23px;
-    }
-
-    &__card {
-      width: 100% !important;
     }
   }
 }

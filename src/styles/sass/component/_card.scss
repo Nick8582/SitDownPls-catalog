@@ -206,7 +206,7 @@
       &--rating {
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 32px;
-        margin-bottom: 31px;
+        margin-bottom: 30px;
       }
     }
 
@@ -221,7 +221,15 @@
       margin-bottom: 12px;
 
       &--rating {
-        margin-bottom: 15px;
+        margin-bottom: 17px;
+        height: 151px;
+      }
+    }
+    &__title {
+      line-height: 30px;
+      margin-bottom: 22px;
+      &--rating {
+        margin-bottom: 25px;
       }
     }
   }

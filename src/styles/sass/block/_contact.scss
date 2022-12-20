@@ -51,6 +51,7 @@
   }
   &__link {
     text-decoration: underline;
+    padding-left: 4px;
   }
 }
 
@@ -65,6 +66,18 @@
     }
     &__form {
       max-width: 400px;
+    }
+  }
+}
+
+@media (max-width: $table) {
+  .contact {
+    &__container {
+      background: url("../images/contact-background-768.png") right 13% center no-repeat;
+      background-size: 24%;
+    }
+    &__form {
+      max-width: 405px;
     }
   }
 }

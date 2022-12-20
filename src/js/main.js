@@ -45,7 +45,7 @@ const swiperOferta = new Swiper('.oferta__slider', {
     501: {
       slidesPerView: 2,
       slidesPerGroup: 2,
-      spaceBetween: 36,
+      spaceBetween: 34,
     },
     993: {
       slidesPerView: 3,
@@ -61,19 +61,24 @@ const swiperOferta = new Swiper('.oferta__slider', {
 
 const swiperSpecial = new Swiper('.special__slider', {
   effect: 'horizontal',
-  slidesPerView: 3,
-  slidesPerGroup: 3,
+  slidesPerView: 2,
+  slidesPerGroup: 2,
   spaceBetween: 32,
   navigation: {
     nextEl: '.special__button-next',
     prevEl: '.special__button-prev',
   },
   breakpoints: {
+    993: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+      spaceBetween: 32,
+    },
     1311: {
       slidesPerView: 2,
       slidesPerGroup: 2,
       spaceBetween: 32,
-    }
+    },
   }
 });
 
