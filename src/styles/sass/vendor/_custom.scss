@@ -53,3 +53,20 @@
   }
 
 }
+
+@media (max-width: $mobile) {
+  .custom {
+    &__checkbox {
+      padding-left: 20px;
+      &::before {
+        top: 1px;
+      }
+      &::after {
+        top: 3px;
+        left: 5px;
+        width: 5px;
+        height: 9px;
+      }
+    }
+  }
+}

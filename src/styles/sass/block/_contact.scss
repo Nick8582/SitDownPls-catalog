@@ -81,3 +81,27 @@
     }
   }
 }
+
+@media (max-width: $table) {
+  .contact {
+    &__container {
+      background: none;
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .contact {
+    margin-bottom: 70px;
+    &__description {
+      margin-bottom: 15px;
+    }
+    &__btn {
+      padding: 16px 0 15px;
+    }
+    &__label {
+      padding-top: 2px;
+      font-size: 12px;
+    }
+  }
+}

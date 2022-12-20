@@ -60,13 +60,18 @@
       "slider"
       "btn";
       grid-template-columns: 1fr;
+      grid-gap: 26px;
+    }
+
+    &__card {
+      padding-top: 68px;
     }
 
     &__btn {
       margin: 0 auto;
-      max-width: 78px;
+      max-width: 77px;
       width: 100%;
-      padding-top: 23px;
+      padding-top: 22px;
     }
   }
 }

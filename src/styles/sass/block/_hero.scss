@@ -104,16 +104,17 @@
 
 @media (max-width: $mobile) {
   .hero {
-    margin-bottom: 45px;
+    margin-bottom: 46px;
     &__slider {
       padding-bottom: 0;
     }
     &__title {
-      margin-bottom: 151px;
+      margin-bottom: 150px;
     }
     &__button {
       width: 100%;
       max-width: none;
+      padding: 19px 0;
     }
   }
 
@@ -145,6 +146,6 @@
     margin: 4px;
   }
   .swiper-pagination.swiper-pagination-hero{
-    bottom: 47%;
+    bottom: 36.4%;
   }
 }

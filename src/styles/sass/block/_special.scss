@@ -53,3 +53,14 @@
     }
   }
 }
+
+@media (max-width: $mobile) {
+  .special {
+    &__container {
+      grid-template-areas: 'title'
+        'slider'
+        'btn';
+      grid-template-columns: 1fr;
+    }
+  }
+}

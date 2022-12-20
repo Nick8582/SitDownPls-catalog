@@ -711,8 +711,8 @@
 
 @media (max-width: $mobile) {
   .header {
-    padding-top: 12px;
-    padding-bottom: 10px;
+    padding-top: 9px;
+    padding-bottom: 17px;
     &::after {
       top: 0;
       height: 50px;
@@ -769,9 +769,13 @@
       grid-column-end: 3 span;
       margin-bottom: 10px;
       &-search {
-        top: 8%;
-        right: 11%;
+        top: 9%;
+        right: 10.5%;
       }
+    }
+    &__search {
+      padding-top: 17px;
+      padding-bottom: 16px;
     }
   }
   .phone {

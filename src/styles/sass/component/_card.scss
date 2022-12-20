@@ -239,8 +239,8 @@
   .card {
     &__list {
       &--rating {
-        grid-gap: 16px;
-        margin-bottom: 34px;
+        grid-gap: 18px 16px;
+        margin-bottom: 32px;
       }
     }
 
@@ -263,9 +263,10 @@
     }
 
     &__picture {
+      margin-bottom: 12px;
       &--rating {
-        height: max(22vw, 73px);
-        margin-bottom: 19px;
+        height: max(22vw, 70px);
+        margin-bottom: 18px;
       }
     }
 
@@ -274,16 +275,17 @@
     }
 
     &__title {
+      line-height: 31px;
       &--rating {
         font-size: 16px;
-        line-height: 20px;
-        margin-bottom: 19px;
+        line-height: 21px;
+        margin-bottom: 17px;
       }
     }
 
     &__price {
       &-modification {
-        margin-bottom: 13px;
+        margin-bottom: 15px;
       }
     }
 

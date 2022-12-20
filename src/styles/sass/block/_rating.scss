@@ -13,10 +13,10 @@
     max-width: 296px;
     margin: 0 auto;
     padding: 19px 0;
-    &-card {
-      padding-top: 17px;
-      padding-bottom: 17px;
-    }
+    //&-card {
+    //  padding-top: 17px;
+    //  padding-bottom: 17px;
+    //}
   }
 }
 
@@ -26,7 +26,10 @@
       margin-bottom: 28px;
     }
     &__btn {
-      padding: 19px 0 18px;
+      padding: 19px 0;
+      &-card {
+        padding: 10px 0;
+      }
     }
   }
 }

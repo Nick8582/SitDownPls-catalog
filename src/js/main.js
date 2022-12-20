@@ -61,14 +61,19 @@ const swiperOferta = new Swiper('.oferta__slider', {
 
 const swiperSpecial = new Swiper('.special__slider', {
   effect: 'horizontal',
-  slidesPerView: 2,
-  slidesPerGroup: 2,
+  slidesPerView: 1,
+  slidesPerGroup: 1,
   spaceBetween: 32,
   navigation: {
     nextEl: '.special__button-next',
     prevEl: '.special__button-prev',
   },
   breakpoints: {
+    501: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 32,
+    },
     993: {
       slidesPerView: 3,
       slidesPerGroup: 3,
