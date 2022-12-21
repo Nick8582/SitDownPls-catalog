@@ -1,15 +1,18 @@
 .footer {
   padding: 22px 0;
   background: $md-gray;
+
   &__container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 26px 30px;
   }
+
   &__logo {
     grid-column-start: 1;
     grid-column-end: 2 span;
     order: 1;
+    outline: none;
   }
 
   &__social {
@@ -34,39 +37,93 @@
   margin: 0;
   padding: 0;
   display: flex;
+
+  &__link {
+    color: $gray;
+    position: relative;
+    display: block;
+    height: 30px;
+    width: 30px;
+    outline: none;
+    &::after {
+      content: '';
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      right: -3px;
+      bottom: -3px;
+      background: $primary-light;
+      opacity: 0;
+      transition: opacity $transition;
+    }
+    &:focus {
+      &:after {
+        opacity: 1;
+      }
+      .social {
+        &__icon {
+          fill: $white;
+        }
+      }
+    }
+  }
+
   &__item {
     &:not(:last-child) {
       margin-right: 20px;
     }
   }
+
   &__icon {
-    width: 30px;
-    height: 30px;
+    width: 100%;
+    height: 100%;
+    fill: $gray;
+    position: relative;
+    z-index: 2;
+    transition: fill $transition;
+
+    &:hover {
+      fill: $primary;
+    }
+
+    &:active {
+      fill: $primary-shade;
+    }
+
+    &:focus {
+
+    }
   }
 }
 
 .nav {
   display: flex;
   justify-content: space-between;
+
   &__list {
     margin: 0;
     padding: 0;
     list-style: none;
+
     &:nth-child(1) {
       margin-right: -21px;
     }
+
     &:nth-child(3) {
       margin-right: 12px;
     }
   }
+
   &__item {
     font-size: 16px;
     line-height: 1;
     color: $black;
+
     &:not(:last-child) {
       margin-bottom: 7px;
     }
   }
+
   &__link {
     text-decoration: none;
     color: $gray;
@@ -77,6 +134,7 @@
 
 .copyright {
   background: $gray-light;
+
   &__container {
     color: $gray;
     text-align: center;
@@ -84,6 +142,7 @@
     font-size: 14px;
     line-height: 19px;
   }
+
   &__text {
     &:not(:last-child) {
       margin-right: 10px;
@@ -97,6 +156,7 @@
     &__container {
       grid-template-columns: repeat(9, 1fr);
     }
+
     &__nav {
       grid-column-start: 3;
       grid-column-end: 7 span;
@@ -107,16 +167,19 @@
 @media (max-width: $table) {
   .footer {
     padding: 24px 0;
+
     &__container {
       grid-template-columns: repeat(6, 1fr);
       grid-gap: 18px 30px;
     }
+
     &__social {
       grid-column-start: 5;
       grid-column-end: 2 span;
       order: 2;
       justify-content: flex-end;
     }
+
     &__nav {
       grid-row: auto;
       grid-column-start: 1;
@@ -129,9 +192,11 @@
       &:first-child {
         margin-right: -18px;
       }
+
       &:nth-child(3) {
         margin-right: 15px;
       }
+
       &:last-child {
         margin-right: 2px;
       }
@@ -151,16 +216,19 @@
       grid-gap: 18px 30px;
       justify-items: center;
     }
+
     &__logo {
       max-width: 190px;
       grid-column-start: auto;
       grid-column-end: auto;
     }
+
     &__social {
       grid-column-start: auto;
       grid-column-end: auto;
       justify-content: center;
     }
+
     &__nav {
       flex-wrap: wrap;
       grid-column-start: auto;
@@ -171,11 +239,13 @@
     &__list {
       max-width: 47%;
       width: 100%;
+
       &:first-child,
       &:nth-child(2) {
         margin-right: 0;
         margin-bottom: 26px;
       }
+
       &:nth-child(3),
       &:last-child {
         margin-right: 0;

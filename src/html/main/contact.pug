@@ -4,7 +4,8 @@ section.contact
     p.contact__description Безусловно, новая модель организационной деятельности в значительной степени обусловливает важность распределения внутренних резервов и ресурсов.
       button.contact__tooltip.tooltip-js(data-tippy-content="Реплицированные с зарубежных источников, исследования формируют глобальную сеть.")
         svg.contact__tooltip-icon(width="14" height="14")
-          use( xlink:href="images/sprite.svg#tooltip" )
+          use.tooltip( xlink:href="images/sprite.svg#tooltip" )
+          use.tooltip-hover( xlink:href="images/sprite.svg#tooltip-hover" )
     form.contact__form
       input.contact__input(placeholder="Как вас зовут?" name="name" type="text")
       input.contact__input(placeholder="Ваш телефон" name="phone" type="tel")

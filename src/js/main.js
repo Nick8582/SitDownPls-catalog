@@ -87,20 +87,21 @@ const swiperSpecial = new Swiper('.special__slider', {
   }
 });
 
-const rating = document.querySelector('.rating');
-const cardDisplay = rating.querySelectorAll('.card__wrap');
+const ratingClass = '.rating';
+const cardDisplayClass = '.card__wrap';
 let winWidth = window.screen.width;
 
-const resize = () => {
+
+const resize = (a) => {
   winWidth = window.screen.width
   if(winWidth > 1309) {
-    for(let i = 0; i < cardDisplay.length; i++) {
-      cardDisplay[i].style.display = 'block';
+    for(let i = 0; i < a.length; i++) {
+      a[i].style.display = 'block';
     }
   } else if(winWidth < 1310) {
-    for(let i = 0; i < cardDisplay.length; i++) {
+    for(let i = 0; i < a.length; i++) {
       if( i > 5 ) {
-        cardDisplay[i].style.display = 'none';
+        a[i].style.display = 'none';
       }
     }
   }
@@ -108,14 +109,22 @@ const resize = () => {
 }
 
 
-window.addEventListener('resize', () => {
-  resize()
-});
+if(document.querySelector(ratingClass)) {
+  const rating = document.querySelector(ratingClass);
+  const cardDisplay = rating.querySelectorAll(cardDisplayClass);
+  resize(cardDisplay);
+  window.addEventListener('resize', () => {
+    resize(cardDisplay);
+  });
+}
+
 
 (() => {
-  resize();
+
   tippy('.tooltip-js', {
     theme: 'project',
     maxWidth: 157,
+    trigger:"mouseenter focus click",
+    interactive: true,
   });
 })()

@@ -23,8 +23,19 @@
     background: transparent;
     padding: 0;
     box-sizing: border-box;
+    outline: none;
     &-icon {
       fill: $secondary;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      .tooltip {
+        display: none;
+        &-hover {
+          display: block;
+        }
+      }
     }
   }
   &__form {
@@ -52,6 +63,26 @@
   &__link {
     text-decoration: underline;
     padding-left: 4px;
+  }
+}
+
+.tooltip {
+  transition: display $transition;
+  &-hover {
+    display: none;
+    transition: display $transition;
+  }
+}
+
+.tippy {
+  &-box {
+    border-radius: 0;
+  }
+  &-content {
+    font-size: 9px;
+    line-height: 14px;
+    padding: 5px;
+    text-align: center;
   }
 }
 
