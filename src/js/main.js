@@ -10,7 +10,7 @@ new Choices(fil, {
   searchEnabled: !1,
   itemSelectText: "",
   shouldSort: !1,
-  classNames: {containerOuter:"choices choices__filter",list:"choices__list--filter",flippedState:""}
+  classNames: {containerOuter: "choices choices__filter", list: "choices__list--filter", flippedState: ""}
 });
 const burger = document.querySelector('.burger--menu');
 const menu = document.querySelector('.bottom--menu');
@@ -94,13 +94,13 @@ let winWidth = window.screen.width;
 
 const resize = (a) => {
   winWidth = window.screen.width
-  if(winWidth > 1309) {
-    for(let i = 0; i < a.length; i++) {
+  if (winWidth > 1309) {
+    for (let i = 0; i < a.length; i++) {
       a[i].style.display = 'block';
     }
-  } else if(winWidth < 1310) {
-    for(let i = 0; i < a.length; i++) {
-      if( i > 5 ) {
+  } else if (winWidth < 1310) {
+    for (let i = 0; i < a.length; i++) {
+      if (i > 5) {
         a[i].style.display = 'none';
       }
     }
@@ -109,7 +109,7 @@ const resize = (a) => {
 }
 
 
-if(document.querySelector(ratingClass)) {
+if (document.querySelector(ratingClass)) {
   const rating = document.querySelector(ratingClass);
   const cardDisplay = rating.querySelectorAll(cardDisplayClass);
   resize(cardDisplay);
@@ -118,13 +118,79 @@ if(document.querySelector(ratingClass)) {
   });
 }
 
-
 (() => {
 
   tippy('.tooltip-js', {
     theme: 'project',
     maxWidth: 157,
-    trigger:"mouseenter focus click",
+    trigger: "mouseenter focus click",
     interactive: true,
   });
+
+
 })()
+let contactButtons = document.querySelector('.contact__btn');
+let contactSuccess = document.querySelectorAll('.contact__input');
+let selector = document.querySelector("input[type='tel']");
+let im = new Inputmask("+7 (999) 999-99-99");
+
+im.mask(selector);
+
+contactButtons.addEventListener('click', (function () {
+  contactSuccess.forEach((function (inp) {
+    return inp.classList.add('js-success')
+  }))
+}))
+
+new JustValidate('.contact__form', {
+  colorWrong: '#D11616',
+  rules: {
+    name: {
+      required: true,
+      minLength: 2,
+      maxLength: 25
+    },
+    tel: {
+      required: true,
+      function: (name, value) => {
+        const phone = selector.inputmask.unmaskedvalue()
+        return Number(phone) && phone.length === 10
+      }
+    },
+    email: {
+      required: true,
+      email: true
+    }
+  },
+  messages: {
+    name: {
+      required: "Недопустимый формат",
+      minLength: "Имя не может быть меньше двух символов",
+      maxLength: "Запрещено вводить более 25 символов"
+    },
+    tel: {
+      required: "Недопустимый формат",
+      function: "Здесь должно быть 10 символов"
+    },
+    email: {
+      required: "Недопустимый формат",
+      email: "Email должен быть по примеру example@mail.ru"
+    }
+  },
+  submitHandler: function(thisForm) {
+    let formData = new FormData(thisForm);
+
+    let xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          console.log('Отправлено');
+        }
+      }
+    }
+    xhr.open('POST', 'mail.php', true);
+    xhr.send(formData);
+    thisForm.reset();
+  }
+});

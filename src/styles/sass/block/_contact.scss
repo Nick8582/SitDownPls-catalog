@@ -42,15 +42,28 @@
     display: flex;
     flex-direction: column;
     max-width: 625px;
+    &-item {
+      position: relative;
+      margin-bottom: 30px;
+    }
   }
   &__input {
     border: 1px solid transparent;
     border-radius: 10px;
-    margin-bottom: 30px;
     padding: 6px 17px;
     background: $gray-light;
     font-size: 16px;
     line-height: 40px;
+    width: 100%;
+    outline: none;
+    transition: border $transition, background $transition;
+    &:hover {
+      background-color: $md-gray;
+    }
+    &:focus {
+      border-color: $primary;
+      background-color: $white-light;
+    }
   }
   &__btn {
     max-width: 159px;
@@ -83,6 +96,28 @@
     line-height: 14px;
     padding: 5px;
     text-align: center;
+  }
+}
+
+.js {
+  &-validate-error {
+    &-label {
+      position: absolute;
+      top: -20px;
+      left: 20px;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 16px;
+      color: $red !important;
+    }
+
+    &-field {
+      border: 1px solid $red !important;
+      color: $black !important
+    }
+  }
+  &-success {
+    border-color: $green;
   }
 }
 
