@@ -1,0 +1,27 @@
+.breadcrumbs {
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  &__item {
+    color: $gray;
+    margin-right: 15px;
+    position: relative;
+    &:not(:last-child) {
+      &:before {
+        content: '/';
+        position: absolute;
+        right: -10px;
+      }
+    }
+    &:last-child {
+      margin-right: 0;
+      color: $primary;
+    }
+  }
+  &__link {
+    color: inherit;
+  }
+}
