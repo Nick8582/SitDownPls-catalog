@@ -1,4 +1,5 @@
 .breadcrumbs {
+  margin-bottom: 30px;
   &__list {
     list-style: none;
     padding: 0;
@@ -13,7 +14,9 @@
       &:before {
         content: '/';
         position: absolute;
-        right: -10px;
+        top: 2px;
+        right: -13px;
+        font-size: 14px;
       }
     }
     &:last-child {
@@ -23,5 +26,6 @@
   }
   &__link {
     color: inherit;
+    font-size: 14px;
   }
 }

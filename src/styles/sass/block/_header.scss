@@ -1,7 +1,7 @@
 .header {
   position: relative;
   padding-top: 15px;
-  padding-bottom: 31px;
+  padding-bottom: 17px;
 
   &::after {
     content: '';
@@ -459,7 +459,7 @@
 @media (max-width: $table-h) {
   .header {
     padding-top: 17px;
-    padding-bottom: 30px;
+    padding-bottom: 15px;
 
     &::after {
       top: 58px;
@@ -537,7 +537,7 @@
 
 @media (max-width: $table) {
   .header {
-    padding-bottom: 29px;
+    padding-bottom: 14px;
 
     &__wrap {
       grid-template-columns: repeat(6, 1fr);
@@ -680,7 +680,7 @@
 @media (max-width: $mobile) {
   .header {
     padding-top: 9px;
-    padding-bottom: 17px;
+    padding-bottom: 5px;
     &::after {
       top: 0;
       height: 50px;
