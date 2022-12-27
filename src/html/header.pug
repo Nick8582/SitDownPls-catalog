@@ -4,42 +4,26 @@ header.header
       .header__region
         span.header__text Ваш регион:
         select.header__select
-          option(value="Москва" selected="selected") Москва
-          option(value="Казань") Казань
-          option( value="Уфа") Уфа
-          option( value="Пермь") Пермь
+          each value in ['Москва', 'Казань', 'Уфа', 'Пермь']
+            option(value= value)= value
       a.header__phone.phone(href="tel:+74958854547" aria-label="Позвонить по телефону")
         svg.phone__icon( width="20" height="20" )
           use( xlink:href="images/sprite.svg#phoneHeader" )
         |  +7 (495) 885-45-47
       nav.header__top--menu.top--menu
         ul.top--menu__list
-          li.top--menu__item
-            a.top--menu__link.link--gray(href="#") О компании
-          li.top--menu__item
-            a.top--menu__link.link--gray(href="#") Гарантия и возврат
-          li.top--menu__item
-            a.top--menu__link.link--gray(href="#") Корпоративным клиентам
-          li.top--menu__item
-            a.top--menu__link.link--gray(href="#") Дизайн-решение
+          each value, index in {'О компании' : 'about', 'Гарантия и возврат' : 'about', 'Корпоративным клиентам' : 'about', 'Дизайн-решение' : 'about', 'Контакты' : 'about'}
+            li.top--menu__item
+              a.top--menu__link.link--gray(href="/" + value + ".html")= index
       a.header__logo(href="#")
         img.header__img(src="images/sprite.svg#logo" alt="Логотип - Интернет магазина")
       button.header__burger--menu.burger--menu
         span.burger--menu__icon
       nav.header__bottom--menu.bottom--menu
         ul.bottom--menu__list
-          li.bottom--menu__item
-            a.bottom--menu__link(href="#") Каталог
-          li.bottom--menu__item
-            a.bottom--menu__link(href="#") Магазины
-          li.bottom--menu__item
-            a.bottom--menu__link(href="#") Шоу-рум
-          li.bottom--menu__item
-            a.bottom--menu__link(href="#") Доставка и оплата
-          li.bottom--menu__item
-            a.bottom--menu__link(href="#") Дисконт
-          li.bottom--menu__item
-            a.bottom--menu__link(href="#") Контакты
+          each value, index in {'Каталог' : 'catalog', 'Магазины' : 'catalog', 'Шоу-рум' : 'catalog', 'Доставка и оплата' : 'catalog', 'Дисконт' : 'catalog', 'Контакты' : 'catalog'}
+            li.bottom--menu__item
+              a.bottom--menu__link(href="/" + value + ".html")= index
       .header__forms
         form.header__form
           svg.header__icon(width="20" height="20")
@@ -48,16 +32,8 @@ header.header
           button.header__btn-search(aria-label="Поиск")
             span.header__btn-right
         select.header__filter.filter
-          option(value="Категория" selected="selected") Категория
-          option(value="Диваны") Диваны
-          option(value="Кресла") Кресла
-          option(value="Пуфы") Пуфы
-          option(value="Кровати") Кровати
-          option(value="Тумбы") Тумбы
-          option(value="Комоды") Комоды
-          option(value="Стулья") Стулья
-          option(value="Столы") Столы
-          option(value="Аксессуары") Аксессуары
+          each value in ['Категория', 'Диваны', 'Кресла', 'Пуфы', 'Кровати', 'Тумбы', 'Комоды', 'Стулья', 'Столы', 'Аксессуары']
+            option(value= value)= value
       .header__btn
         button.header__profile(aria-label="Кнопка профиля")
           svg.header__user
