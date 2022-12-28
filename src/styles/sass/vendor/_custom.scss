@@ -50,6 +50,25 @@
       transform: rotate(45deg);
       opacity: 0;
     }
+    &-filter {
+      padding-left: 32px;
+      font-weight: 400;
+      color: $gray-shade;
+      font-size: 16px;
+      line-height: 20px;
+      &::before {
+        width: 20px;
+        height: 20px;
+      }
+      &::after {
+        top: 4px;
+        left: 7px;
+        width: 6px;
+        height: 12px;
+        border-right: 3px solid $white;
+        border-bottom: 3px solid $white;
+      }
+    }
   }
 
 }

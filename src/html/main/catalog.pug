@@ -1,7 +1,17 @@
 section.catalog
+  h1.title Каталог интернет-магазина sdp.
   .container.catalog__container
-    h1.title Каталог интернет-магазина sdp.
     .catalog__filter.filter
+      h3.filter__title Фильтровать по:
+      ul.filter__list
+        li.filter__name
+          button.filter__name Категория
+          ul.filter__category-list
+            each text in ['Диваны', 'Кресла', 'Пуфы', 'Кровати', 'Тумбы', 'Комоды', 'Стулья', 'Столы', 'Аксессуары']
+              li.filter__category-item
+                label.custom__check-label
+                  input.custom__check(type="checkbox")
+                  span.custom__checkbox.custom__checkbox-filter= text
 
     h2.container__title.catalog__title Каталог
 
