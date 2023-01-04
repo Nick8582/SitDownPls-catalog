@@ -1,4 +1,4 @@
-if(document.querySelector('.header')) {
+if (document.querySelector('.header')) {
   let reg = document.querySelector(".header__select");
   new Choices(reg, {
     searchEnabled: !1,
@@ -21,7 +21,6 @@ if(document.querySelector('.header')) {
     burger.classList.toggle('active');
   })
 }
-
 
 
 if (document.querySelector('.hero__slider')) {
@@ -99,30 +98,45 @@ if (document.querySelector('.special__slider')) {
 if (document.querySelector('.rating')) {
   const ratingClass = '.rating';
   const cardDisplayClass = '.card__wrap';
+  const btnRating = document.querySelector('.rating__btn');
   let winWidth = window.screen.width;
 
-
-  const resize = (a) => {
+  const resize = (a, b) => {
     winWidth = window.screen.width
     if (winWidth > 1309) {
       for (let i = 0; i < a.length; i++) {
         a[i].style.display = 'block';
+        if (i > 7) {
+          a[i].style.display = 'none';
+          btnRating.style.display = 'block';
+        }
       }
     } else if (winWidth < 1310) {
       for (let i = 0; i < a.length; i++) {
         if (i > 5) {
           a[i].style.display = 'none';
+          btnRating.style.display = 'block';
         }
       }
     }
+    if (b) {
+      for (let i = 0; i < a.length; i++) {
+        a[i].style.display = 'block';
+      }
+      btnRating.style.display = 'none';
+    }
     console.log(winWidth)
   }
-  const rating = document.querySelector(".ratingClass");
-  const cardDisplay = rating.querySelectorAll(".cardDisplayClass");
+  const rating = document.querySelector(ratingClass);
+  const cardDisplay = rating.querySelectorAll(cardDisplayClass);
   resize(cardDisplay);
   window.addEventListener('resize', () => {
     resize(cardDisplay);
   });
+  btnRating.addEventListener('click', (e) => {
+    e.preventDefault();
+    resize(cardDisplay, "click");
+  })
 }
 
 (() => {
