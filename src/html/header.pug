@@ -10,20 +10,20 @@ header.header
         svg.phone__icon( width="20" height="20" )
           use( xlink:href="images/sprite.svg#phoneHeader" )
         |  +7 (495) 885-45-47
-      nav.header__top--menu.top--menu
-        ul.top--menu__list
+      nav.header__menu-top.menu-top
+        ul.menu-top__list
           each value, index in {'О компании' : 'about', 'Гарантия и возврат' : 'about', 'Корпоративным клиентам' : 'about', 'Дизайн-решение' : 'about', 'Контакты' : 'about'}
-            li.top--menu__item
-              a.top--menu__link.link--gray(href="/" + value + ".html")= index
+            li.menu-top__item
+              a.menu-top__link.link.link--gray(href="/" + value + ".html")= index
       a.header__logo(href="#")
         img.header__img(src="images/sprite.svg#logo" alt="Логотип - Интернет магазина")
-      button.header__burger--menu.burger--menu
-        span.burger--menu__icon
-      nav.header__bottom--menu.bottom--menu
-        ul.bottom--menu__list
+      button.header__burger-menu.burger-menu
+        span.burger-menu__icon
+      nav.header__bottom-menu.bottom-menu
+        ul.bottom-menu__list
           each value, index in {'Каталог' : 'catalog', 'Магазины' : 'catalog', 'Шоу-рум' : 'catalog', 'Доставка и оплата' : 'catalog', 'Дисконт' : 'catalog', 'Контакты' : 'catalog'}
-            li.bottom--menu__item
-              a.bottom--menu__link(href="/" + value + ".html")= index
+            li.bottom-menu__item
+              a.bottom-menu__link(href="/" + value + ".html")= index
       .header__forms
         form.header__form
           svg.header__icon(width="20" height="20")

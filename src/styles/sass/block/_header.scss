@@ -77,7 +77,7 @@
     }
   }
 
-  &__top--menu {
+  &__menu-top {
     grid-column-start: 6;
     grid-column-end: 7 span;
     align-self: flex-start;
@@ -92,7 +92,7 @@
     outline: none;
   }
 
-  &__bottom--menu {
+  &__bottom-menu {
     grid-column-start: 4;
     grid-column-end: 9 span;
     justify-self: flex-end;
@@ -303,7 +303,7 @@
   }
 }
 
-.top--menu {
+.menu-top {
   &__list {
     list-style: none;
     margin: 0;
@@ -338,7 +338,7 @@
   }
 }
 
-.burger--menu {
+.burger-menu {
   position: relative;
   z-index: 10;
   border: none;
@@ -394,7 +394,7 @@
       transform: rotate(-45deg);
       transition: transform $transition, top $transition;
     }
-    .burger--menu {
+    .burger-menu {
       &__icon {
         transform: scale(0);
         transition: transform $transition;
@@ -403,7 +403,7 @@
   }
 }
 
-.bottom--menu {
+.bottom-menu {
   &__list {
     list-style: none;
     margin: 0;
@@ -489,7 +489,7 @@
       }
     }
 
-    &__top--menu {
+    &__menu-top {
       grid-column-start: 1;
       grid-column-end: 7 span;
       justify-self: flex-start;
@@ -504,7 +504,7 @@
       padding-top: 12px;
     }
 
-    &__bottom--menu {
+    &__bottom-menu {
       grid-column-start: 3;
       grid-column-end: 7 span;
       order: 6;
@@ -556,7 +556,7 @@
       order: 2;
     }
 
-    &__top--menu {
+    &__menu-top {
       grid-column-start: 1;
       grid-column-end: 6 span;
       order: 3;
@@ -577,7 +577,7 @@
       order: 4;
     }
 
-    &__bottom--menu {
+    &__bottom-menu {
       position: absolute;
       top: 108px;
       left: 0;
@@ -614,17 +614,17 @@
       order: 7;
     }
   }
-  .top--menu {
+  .menu-top {
     &__item {
       &:not(:last-child) {
         margin-right: auto;
       }
     }
   }
-  .burger--menu {
+  .burger-menu {
     display: block;
   }
-  .bottom--menu {
+  .bottom-menu {
     &__list {
       position: relative;
       flex-direction: column;
@@ -650,10 +650,10 @@
       top: 0;
       height: 50px;
     }
-    &__top--menu {
+    &__menu-top {
       display: none;
     }
-    &__bottom--menu {
+    &__bottom-menu {
       top: 128px;
     }
     &__forms {
@@ -725,7 +725,7 @@
       max-width: 187px;
       width: 100%;
     }
-    &__bottom--menu {
+    &__bottom-menu {
       top: 144px;
       padding: 62px 0 25px 12px;
       &.active {
@@ -749,11 +749,11 @@
   .phone {
     margin: 0 0 10px;
   }
-  .burger--menu {
+  .burger-menu {
     margin-left: 5px;
     margin-bottom: 9px;
   }
-  .bottom--menu {
+  .bottom-menu {
     &__list {
       flex-wrap: nowrap;
       max-height: 100%;

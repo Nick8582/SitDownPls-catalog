@@ -1,5 +1,5 @@
 .btn {
-  &__primary {
+  &--primary {
     padding: 18px 0 19px;
     background: none;
     outline: none;
@@ -31,7 +31,7 @@
     }
   }
 
-  &__border {
+  &--border {
     display: block;
     text-align: center;
     text-decoration: none;
@@ -64,7 +64,7 @@
     }
   }
 
-  &__slider {
+  &--slider {
     grid-area: btn;
     position: relative;
     justify-items: end;
@@ -156,7 +156,7 @@
 
 @media (max-width: $table-h) {
   .btn {
-    &__border {
+    &--border {
       padding: 17px 0;
     }
   }

@@ -1,5 +1,5 @@
 .custom {
-  &__check {
+  &--check {
     position: absolute;
     appearance: none;
 
@@ -22,7 +22,7 @@
   }
 
 
-  &__checkbox {
+  &--checkbox {
     padding-left: 22px;
     cursor: pointer;
 
@@ -75,7 +75,7 @@
 
 @media (max-width: $mobile) {
   .custom {
-    &__checkbox {
+    &--checkbox {
       padding-left: 20px;
       &::before {
         top: 1px;
