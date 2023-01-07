@@ -219,3 +219,17 @@ if (document.querySelector(".contact__input")) {
   });
 }
 
+if (document.querySelector('.js-filter-price-options')) {
+  const filterPriceSlider = document.querySelector('.filter__range-slider')
+
+  noUiSlider.create(filterPriceSlider, {
+    start: [10000, 100000],
+    connect: true,
+    range: {
+      min: 0,
+      max: 150000,
+    },
+    step: 1,
+
+  })
+}

@@ -1,7 +1,8 @@
 .catalog {
   &__container {
     display: grid;
-    grid-template-columns: 329px 1fr;
+    grid-template-columns: 297px 1fr;
+    grid-gap: 0 32px;
   }
   &__title {
     font-size: 24px;

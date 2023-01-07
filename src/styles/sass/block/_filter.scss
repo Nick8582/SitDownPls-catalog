@@ -13,6 +13,10 @@
     padding: 0;
   }
 
+  &__param {
+    margin-bottom: 30px;
+  }
+
   &__name {
     padding: 0;
     margin: 0;
@@ -38,6 +42,20 @@
       &:not(:last-child) {
         margin-bottom: 12px;
       }
+    }
+  }
+  &__options {
+    &-price {
+      display: flex;
+    }
+  }
+  &__range {
+    &-text {
+      display: flex;
+      width: 50%;
+    }
+    &-input {
+      width: 100%;
     }
   }
 }

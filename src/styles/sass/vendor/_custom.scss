@@ -9,7 +9,7 @@
 
     &:checked {
       &+.custom {
-        &__checkbox {
+        &--checkbox {
           &::before {
             background: $primary;
           }
