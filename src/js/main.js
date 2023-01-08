@@ -220,16 +220,38 @@ if (document.querySelector(".contact__input")) {
 }
 
 if (document.querySelector('.js-filter-price-options')) {
+  const filterPriceFrom = document.querySelector('.js-filter-price-from');
+  const filterPriceTo = document.querySelector('.js-filter-price-to')
   const filterPriceSlider = document.querySelector('.filter__range-slider')
 
   noUiSlider.create(filterPriceSlider, {
-    start: [10000, 100000],
+    start: [2000, 150000],
     connect: true,
     range: {
       min: 0,
-      max: 150000,
+      max: 200000,
     },
     step: 1,
-
+    format: wNumb({
+      decimals: 0,
+      thousand: ' ',
+    })
   })
+
+  filterPriceSlider.noUiSlider.on('update', function (values, handle) {
+    const value = values[handle]
+
+    if (handle) {
+      filterPriceTo.value = value
+    } else {
+      filterPriceFrom.value = value
+    }
+  })
+
+  filterPriceFrom.addEventListener('change', () =>
+    filterPriceSlider.noUiSlider.set([filterPriceFrom.value, null])
+  )
+  filterPriceTo.addEventListener('change', () =>
+    filterPriceSlider.noUiSlider.set([null, filterPriceTo.value])
+  )
 }
