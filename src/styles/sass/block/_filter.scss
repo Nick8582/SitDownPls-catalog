@@ -15,6 +15,9 @@
 
   &__param {
     margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   &__name {
@@ -79,6 +82,7 @@
       height: 3px;
       background-color: $md-gray;
       border: none;
+      margin-bottom: 38px;
     }
   }
 }

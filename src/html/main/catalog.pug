@@ -1,27 +1,54 @@
 section.catalog
   h1.title Каталог интернет-магазина sdp.
   .container.catalog__container
-    .catalog__filter.filter
-      h3.filter__title Фильтровать по:
-      ul.filter__list
-        li.filter__param
-          button.filter__name Категория
-          ul.filter__category-list
-            each text in ['Диваны', 'Кресла', 'Пуфы', 'Кровати', 'Тумбы', 'Комоды', 'Стулья', 'Столы', 'Аксессуары']
-              li.filter__category-item
-                label.custom.custom--check-label
-                  input.custom.custom--check(type="checkbox")
-                  span.custom.custom--checkbox.custom--checkbox-filter= text
-        li.filter__param
-          button.filter__name Цена
-          .filter__options-price.js-filter-price-options
-            label.filter__range-label
-              span.filter__range-text от
-              input.filter__range-input.js-filter-price-from(type="text")
-            label.filter__range-label
-              span.filter__range-text до
-              input.filter__range-input.js-filter-price-to(type="text")
-          .filter__range-slider
-
+    .catalog__left
+      .catalog__filter.filter
+        h3.filter__title Фильтровать по:
+        ul.filter__list
+          li.filter__param
+            button.filter__name Категория
+            ul.filter__category-list
+              each text in ['Диваны', 'Кресла', 'Пуфы', 'Кровати', 'Тумбы', 'Комоды', 'Стулья', 'Столы', 'Аксессуары']
+                li.filter__category-item
+                  label.custom.custom--check-label
+                    input.custom.custom--check(type="checkbox")
+                    span.custom.custom--checkbox.custom--checkbox-filter= text
+          li.filter__param
+            button.filter__name Цена
+            .filter__options-price.js-filter-price-options
+              label.filter__range-label
+                span.filter__range-text от
+                input.filter__range-input.js-filter-price-from(type="text")
+              label.filter__range-label
+                span.filter__range-text до
+                input.filter__range-input.js-filter-price-to(type="text")
+            .filter__range-slider
+          li.filter__param
+            button.filter__name Скидка
+            ul.filter__category-list
+              each text in ['Более 5 000', 'Менее 5 000', 'Не важно']
+                li.filter__category-item
+                  label.custom.custom--check-label
+                    input.custom.custom--check(type="checkbox")
+                    span.custom.custom--checkbox.custom--checkbox-filter= text
+          li.filter__param
+            button.filter__name Цвет
+            ul.filter__category-list
+              each text in ['Коричневый', 'Черный', 'Бежевый', 'Серый', 'Белый', 'Синий', 'Оранжевый', 'Желтый', 'Зеленый']
+                li.filter__category-item
+                  label.custom.custom--check-label
+                    input.custom.custom--check(type="checkbox")
+                    span.custom.custom--checkbox.custom--checkbox-filter= text
+      .catalog__banner.banner
+        .banner__card
+          .banner__image
+            picture
+              img(src="images/promo-banner.jpg")
+          .banner__description
+            h4.banner__title Оксфорд 1950
+            p.banner__text Новая коллекция изысканных кресел
+            a(href="/catalog.html").banner__link
+              span.banner__link-text В каталог
+              span.banner__link-arrow
     h2.container__title.catalog__title Каталог
 
