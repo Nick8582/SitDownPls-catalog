@@ -255,3 +255,17 @@ if (document.querySelector('.js-filter-price-options')) {
     filterPriceSlider.noUiSlider.set([null, filterPriceTo.value])
   )
 }
+
+if (document.querySelector('.card__list--catalog')) {
+  const cardCatalog = document.querySelector('.card__list--catalog');
+  const cardItem = cardCatalog.querySelectorAll('.card__wrap');
+
+  for(let i = 0; i < cardItem.length; i++) {
+    let a = cardItem[i]
+    if(i < 9) {
+      a.style.display = 'block';
+    } else {
+      a.style.display = 'none';
+    }
+  }
+}
