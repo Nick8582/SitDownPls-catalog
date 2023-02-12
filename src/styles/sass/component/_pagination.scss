@@ -1,0 +1,39 @@
+.pagination {
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+  }
+  &__link {
+    background: none;
+    border: 2px $primary solid;
+    color: $primary;
+    padding: 6px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: color $transition, background-color $transition, border $transition;
+    &.active {
+      color: $white;
+      background: $primary-shade;
+      border: 1px $primary-shade solid;
+    }
+    &:hover {
+      color: $white;
+      background-color: $primary;
+    }
+    &:focus {
+      outline: none;
+      color: $white;
+      background-color: $primary-light;
+    }
+
+
+  }
+}

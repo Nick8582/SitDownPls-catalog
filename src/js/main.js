@@ -259,13 +259,80 @@ if (document.querySelector('.js-filter-price-options')) {
 if (document.querySelector('.card__list--catalog')) {
   const cardCatalog = document.querySelector('.card__list--catalog');
   const cardItem = cardCatalog.querySelectorAll('.card__wrap');
-
-  for(let i = 0; i < cardItem.length; i++) {
+  console.log(cardItem.length)
+  let paginationLimit = 9
+  let firsPaginationLimit = 0;
+  for (let i = firsPaginationLimit; i < cardItem.length; i++) {
     let a = cardItem[i]
-    if(i < 9) {
+    if (i < paginationLimit) {
       a.style.display = 'block';
     } else {
       a.style.display = 'none';
+    }
+  }
+
+  let containerCatalogPagination = document.querySelector('.pagination__list');
+  let numberPagination;
+
+  function createPaginationBtn(data) {
+    let  liPagination = document.createElement('li');
+    liPagination.classList.add('pagination__item');
+    let btnPagination = document.createElement('button');
+    btnPagination.classList.add('pagination__link');
+    btnPagination.textContent = data;
+    btnPagination.setAttribute('value', data);
+
+    btnPagination.onclick = function(e) {
+      e.preventDefault();
+      clickFunctionTab(data);
+      btnPagination.classList.add('active');
+
+    }
+
+    containerCatalogPagination.append(liPagination);
+    liPagination.append(btnPagination);
+  }
+
+  for(let i = 0; i < cardItem.length/paginationLimit; i++) {
+    numberPagination = i+1
+    createPaginationBtn(numberPagination);
+  }
+
+  let allBtn = containerCatalogPagination.querySelectorAll('button');
+  function firstLoad() {
+    for(let i = 0; i < allBtn.length; i++) {
+      if (allBtn[i].getAttribute('value') === '1') {
+        allBtn[i].classList.add('active');
+      }
+    }
+  }
+  document.addEventListener('DOMContentLoaded', firstLoad);
+
+  function clickFunctionTab(data) {
+
+    if(data === 1) {
+      catalogCardVisible(firsPaginationLimit, paginationLimit)
+    } else if (data === 2) {
+      catalogCardVisible(paginationLimit, (paginationLimit * data) )
+    } else if (data >= 3) {
+      catalogCardVisible((paginationLimit * (data-1)), (paginationLimit * data) )
+    }
+    let btnPaginationSearch = document.querySelectorAll('.pagination__link');
+    for(let i = 0; i < btnPaginationSearch.length; i++) {
+
+      btnPaginationSearch[i].classList.remove('active');
+    }
+
+  }
+
+  function catalogCardVisible(a, b) {
+    for (let i = 0; i < cardItem.length; i++) {
+      cardItem[i].style.display = 'none';
+    }
+    for (let i = a; i < cardItem.length; i++) {
+      if(i < b) {
+        cardItem[i].style.display = 'block';
+      }
     }
   }
 }
