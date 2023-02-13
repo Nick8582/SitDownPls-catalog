@@ -29,3 +29,9 @@
     font-size: 14px;
   }
 }
+
+@media (max-width: $table-h) {
+  .breadcrumbs {
+    margin-bottom: 23px;
+  }
+}
