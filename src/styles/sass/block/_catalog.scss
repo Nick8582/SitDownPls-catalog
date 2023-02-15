@@ -82,3 +82,11 @@
     }
   }
 }
+
+@media (max-width: $table) {
+  .catalog {
+    &__filter {
+      flex-direction: column;
+    }
+  }
+}

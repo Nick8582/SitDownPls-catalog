@@ -8,7 +8,7 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       grid-gap: 32px;
-      margin-bottom: 32px;
+      margin-bottom: 30px;
     }
     &--catalog {
       display: grid;
@@ -35,9 +35,9 @@
 
   &__discont {
     position: absolute;
-    top: 32px;
+    top: 30px;
     left: 0;
-    padding: 10px 0 9px;
+    padding: 9px 0 11px;
     max-width: 82px;
     width: 100%;
     font-size: 14px;
@@ -51,9 +51,9 @@
       content: '';
       position: absolute;
       top: 0;
-      right: -26px;
-      border: 16px solid transparent;
-      border-left: 10px solid $secondary;
+      right: -29px;
+      border: 17px solid transparent;
+      border-left: 12px solid $secondary;
     }
   }
 
@@ -83,12 +83,14 @@
     align-items: flex-end;
     align-self: center;
     justify-content: center;
-    margin-bottom: 16px;
+    margin-bottom: 15px;
     max-height: 245px;
     height: 100%;
 
     &--rating {
-      height: 156px;
+      height: 154px;
+      max-width: 255px;
+      width: 100%;
     }
   }
 
@@ -143,7 +145,7 @@
     }
 
     &-modification {
-      margin-bottom: 23px;
+      margin-bottom: 26px;
     }
   }
 
@@ -208,11 +210,18 @@
 @media (max-width: $table) {
   .card {
     &__list {
+      &--catalog {
+        grid-template-columns: repeat(2, 1fr);
+      }
       &--rating {
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 32px;
         margin-bottom: 30px;
       }
+    }
+
+    &__rating {
+      top: 33px;
     }
 
     &__item {

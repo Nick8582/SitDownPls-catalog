@@ -95,11 +95,11 @@ if (document.querySelector('.special__slider')) {
   });
 }
 
+let winWidth = window.screen.width;
 if (document.querySelector('.rating')) {
   const ratingClass = '.rating';
   const cardDisplayClass = '.card__wrap';
   const btnRating = document.querySelector('.rating__btn');
-  let winWidth = window.screen.width;
 
   const resize = (a, b) => {
     winWidth = window.screen.width
