@@ -2,6 +2,7 @@
   padding-top: 3px;
 
   &__title {
+    margin-bottom: 21px;
     &--long {
       font-size: 18px;
       font-weight: 400;
@@ -102,6 +103,7 @@
     margin-bottom: 15px;
     &__title {
       margin-right: 43px;
+      margin-bottom: 0;
       &--long {
         display: none;
       }
@@ -117,6 +119,21 @@
     &__param {
       position: relative;
       margin-bottom: 0;
+      &.is-active {
+        .filter {
+          &__name {
+            &:before {
+              transform: rotate(225deg);
+              margin: 0;
+            }
+          }
+          &__category-list,
+          &__options {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
     }
     &__name {
       background-color: $gray-light;
@@ -132,6 +149,19 @@
       position: relative;
       z-index: 3;
       margin-bottom: 0;
+      &:before {
+        content: '';
+        border-right: 1px solid $primary;
+        border-bottom: 1px solid $primary;
+        position: absolute;
+        right: 15px;
+        transform: rotate(45deg);
+        width: 9px;
+        height: 9px;
+        top: 50%;
+        margin-top: -9px;
+        transition: transform $transition, margin $transition;
+      }
     }
     &__category-list,
     &__options {
@@ -146,6 +176,20 @@
       z-index: 2;
       visibility: hidden;
       opacity: 0;
+      transition: opacity $transition, opacity $transition;
+    }
+    &__options-price {
+      flex-direction: column;
+    }
+    &__range {
+      &-slider {
+        display: none;
+      }
+      &-label {
+        &:not(:last-child) {
+          margin-bottom: 10px;
+        }
+      }
     }
   }
 }

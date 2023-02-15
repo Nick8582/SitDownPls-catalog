@@ -254,6 +254,22 @@ if (document.querySelector('.js-filter-price-options')) {
   filterPriceTo.addEventListener('change', () =>
     filterPriceSlider.noUiSlider.set([null, filterPriceTo.value])
   )
+
+  let filterParam = document.querySelectorAll('.filter__param');
+  for (let i = 0; i < filterParam.length; i++) {
+    let filterParamBtn = filterParam[i].querySelector('.filter__name');
+    filterParamBtn.onclick = function (e) {
+      e.preventDefault();
+      if (filterParam[i].classList.contains('is-active')) {
+        filterParam[i].classList.remove('is-active');
+      } else {
+        for (let i = 0; i < filterParam.length; i++) {
+          filterParam[i].classList.remove('is-active');
+        }
+        filterParam[i].classList.add('is-active')
+      }
+    }
+  }
 }
 
 if (document.querySelector('.card__list--catalog')) {
@@ -275,14 +291,14 @@ if (document.querySelector('.card__list--catalog')) {
   let numberPagination;
 
   function createPaginationBtn(data) {
-    let  liPagination = document.createElement('li');
+    let liPagination = document.createElement('li');
     liPagination.classList.add('pagination__item');
     let btnPagination = document.createElement('button');
     btnPagination.classList.add('pagination__link');
     btnPagination.textContent = data;
     btnPagination.setAttribute('value', data);
 
-    btnPagination.onclick = function(e) {
+    btnPagination.onclick = function (e) {
       e.preventDefault();
       clickFunctionTab(data);
       btnPagination.classList.add('active');
@@ -293,32 +309,34 @@ if (document.querySelector('.card__list--catalog')) {
     liPagination.append(btnPagination);
   }
 
-  for(let i = 0; i < cardItem.length/paginationLimit; i++) {
-    numberPagination = i+1
+  for (let i = 0; i < cardItem.length / paginationLimit; i++) {
+    numberPagination = i + 1
     createPaginationBtn(numberPagination);
   }
 
   let allBtn = containerCatalogPagination.querySelectorAll('button');
+
   function firstLoad() {
-    for(let i = 0; i < allBtn.length; i++) {
+    for (let i = 0; i < allBtn.length; i++) {
       if (allBtn[i].getAttribute('value') === '1') {
         allBtn[i].classList.add('active');
       }
     }
   }
+
   document.addEventListener('DOMContentLoaded', firstLoad);
 
   function clickFunctionTab(data) {
 
-    if(data === 1) {
+    if (data === 1) {
       catalogCardVisible(firsPaginationLimit, paginationLimit)
     } else if (data === 2) {
-      catalogCardVisible(paginationLimit, (paginationLimit * data) )
+      catalogCardVisible(paginationLimit, (paginationLimit * data))
     } else if (data >= 3) {
-      catalogCardVisible((paginationLimit * (data-1)), (paginationLimit * data) )
+      catalogCardVisible((paginationLimit * (data - 1)), (paginationLimit * data))
     }
     let btnPaginationSearch = document.querySelectorAll('.pagination__link');
-    for(let i = 0; i < btnPaginationSearch.length; i++) {
+    for (let i = 0; i < btnPaginationSearch.length; i++) {
 
       btnPaginationSearch[i].classList.remove('active');
     }
@@ -330,7 +348,7 @@ if (document.querySelector('.card__list--catalog')) {
       cardItem[i].style.display = 'none';
     }
     for (let i = a; i < cardItem.length; i++) {
-      if(i < b) {
+      if (i < b) {
         cardItem[i].style.display = 'block';
       }
     }
