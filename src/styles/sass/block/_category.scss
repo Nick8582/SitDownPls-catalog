@@ -218,6 +218,10 @@
 
 @media (max-width: $table-h) {
   .category {
+    margin-bottom: 71px;
+    &__title {
+      margin-bottom: 26px;
+    }
     &__item {
       &:first-child {
         grid-column-end: span 4;

@@ -31,8 +31,11 @@
     background: url('../images/promo-1-1024.jpg') no-repeat;
     background-position: center;
     background-size: cover;
-    padding-bottom: 149px;
-    margin-bottom: 71px;
+    padding-bottom: 150px;
+    margin-bottom: 70px;
+    &__btn {
+      padding: 19px 0;
+    }
   }
 }
 

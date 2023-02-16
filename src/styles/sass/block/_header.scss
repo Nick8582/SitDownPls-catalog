@@ -468,7 +468,7 @@
 
     &__wrap {
       grid-template-columns: repeat(9, 1fr);
-      grid-gap: 28px 30px;
+      grid-gap: 27px 30px;
     }
 
     &__region {
@@ -515,7 +515,7 @@
 
     &__forms {
       grid-column-end: 9 span;
-      grid-template-columns: 69% 31%;
+      grid-template-columns: 68.4% 31.6%;
       order: 7;
     }
 
@@ -529,8 +529,8 @@
       order: 4;
 
       &-search {
-        right: 34.8%;
-        top: 20%;
+        right: 34.9%;
+        margin-top: -15px;
       }
     }
   }

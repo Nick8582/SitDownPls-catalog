@@ -12,7 +12,7 @@ section.catalog
               each text in ['Диваны', 'Кресла', 'Пуфы', 'Кровати', 'Тумбы', 'Комоды', 'Стулья', 'Столы', 'Аксессуары']
                 li.filter__category-item
                   label.custom.custom--check-label
-                    input.custom.custom--check(type="checkbox")
+                    input.custom.custom--check(type="checkbox" name="category")
                     span.custom.custom--checkbox.custom--checkbox-filter= text
           li.filter__param
             button.filter__name Цена
@@ -20,10 +20,10 @@ section.catalog
               .filter__options-price.js-filter-price-options
                 label.filter__range-label
                   span.filter__range-text от
-                  input.filter__range-input.js-filter-price-from(type="text")
+                  input.filter__range-input.js-filter-price-from(type="text" name='price')
                 label.filter__range-label
                   span.filter__range-text до
-                  input.filter__range-input.js-filter-price-to(type="text")
+                  input.filter__range-input.js-filter-price-to(type="text" name='price')
               .filter__range-slider
           li.filter__param
             button.filter__name Скидка
@@ -31,7 +31,7 @@ section.catalog
               each text in ['Более 5 000', 'Менее 5 000', 'Не важно']
                 li.filter__category-item
                   label.custom.custom--check-label
-                    input.custom.custom--check(type="checkbox")
+                    input.custom.custom--check(type="checkbox" name='discount')
                     span.custom.custom--checkbox.custom--checkbox-filter= text
           li.filter__param
             button.filter__name Цвет
@@ -39,7 +39,7 @@ section.catalog
               each text in ['Коричневый', 'Черный', 'Бежевый', 'Серый', 'Белый', 'Синий', 'Оранжевый', 'Желтый', 'Зеленый']
                 li.filter__category-item
                   label.custom.custom--check-label
-                    input.custom.custom--check(type="checkbox")
+                    input.custom.custom--check(type="checkbox" name='color')
                     span.custom.custom--checkbox.custom--checkbox-filter= text
 
     h2.container__title.catalog__title Каталог
@@ -54,7 +54,7 @@ section.catalog
                 img.card__img(src=`./images/${data.img}.png` alt=`${data.name}`)
               .card__discription
                 h3.card__title.card__title--rating= data.name
-                .card__price.card__price-modification
+                .card__price.card__price-catalog
                   span.card__price-rating= data.price
                 a.catalog__btn-card.btn.btn--border(href="#") Купить
     .catalog__pagination.pagination

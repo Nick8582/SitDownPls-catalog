@@ -1,4 +1,5 @@
 .pagination {
+  margin-top: 17px;
   &__list {
     list-style: none;
     margin: 0;
@@ -8,10 +9,14 @@
   }
   &__item {
     &:not(:last-child) {
-      margin-right: 16px;
+      margin-right: 15px;
     }
   }
   &__link {
+    max-width: 32px;
+    max-height: 32px;
+    width: 100%;
+    height: 100%;
     background: none;
     border: 2px $primary solid;
     color: $primary;

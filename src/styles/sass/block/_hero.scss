@@ -57,6 +57,9 @@
 }
 
 @media (max-width: $table-h) {
+  .hero {
+    padding-top: 17px;
+  }
   .swiper {
     &-slide {
       &-one {

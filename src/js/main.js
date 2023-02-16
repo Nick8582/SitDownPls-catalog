@@ -270,6 +270,56 @@ if (document.querySelector('.js-filter-price-options')) {
       }
     }
   }
+
+  let tagList = document.querySelector('.catalog__filter-tag-list');
+  let filterInputs = document.querySelectorAll('.custom--check');
+
+  filterInputs.forEach(e => {
+    e.addEventListener("change", t => {
+      let name = t.target.nextElementSibling.textContent;
+      let typeFilter = e.getAttribute('name');
+
+      if (t.target.checked) {
+        const liTag = document.createElement('li');
+        liTag.classList.add('catalog__filter-tag-item');
+        const spanTag = document.createElement('span');
+        spanTag.textContent = name;
+        spanTag.classList.add('catalog__tag');
+        let colorTag;
+        switch (typeFilter) {
+          case"category":
+            colorTag = "--color-green";
+            break;
+          case"price":
+            colorTag = "--color-orange";
+            break;
+          case"discount":
+            colorTag = "--color-violet";
+            break;
+          case"color":
+            colorTag = "--color-grey";
+            break;
+        }
+        spanTag.classList.add(`catalog__tag${colorTag}`);
+        const btnCloseTag = document.createElement('button');
+        btnCloseTag.classList.add('close-btn', 'catalog__tag-close-btn')
+        btnCloseTag.addEventListener('click',()=> {
+          btnCloseTag.parentElement.parentElement.remove();
+          e.checked = false;
+        })
+        const spanCloseTag = document.createElement('span');
+
+        btnCloseTag.append(spanCloseTag)
+        spanTag.append(btnCloseTag);
+        liTag.append(spanTag)
+        tagList.append(liTag);
+      } else {
+        tagList.querySelectorAll('.catalog__tag').forEach(e => {
+          e.textContent === name && e.parentElement.remove()
+        })
+      }
+    })
+  })
 }
 
 if (document.querySelector('.card__list--catalog')) {

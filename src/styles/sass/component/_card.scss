@@ -13,7 +13,7 @@
     &--catalog {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      grid-gap: 32px;
+      grid-gap: 32px 33px;
     }
   }
 
@@ -114,7 +114,7 @@
 
     &--rating {
       max-width: 100%;
-      margin-bottom: 21px;
+      margin-bottom: 24px;
     }
   }
 
@@ -147,6 +147,10 @@
     &-modification {
       margin-bottom: 26px;
     }
+
+    &-catalog {
+      margin-bottom: 24px;
+    }
   }
 
   &__right {
@@ -161,7 +165,7 @@
     &__list {
       &--rating {
         grid-template-columns: repeat(3, 1fr);
-        margin-bottom: 31px;
+        margin-bottom: 30px;
       }
     }
 
