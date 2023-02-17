@@ -325,9 +325,25 @@ if (document.querySelector('.js-filter-price-options')) {
 if (document.querySelector('.card__list--catalog')) {
   const cardCatalog = document.querySelector('.card__list--catalog');
   const cardItem = cardCatalog.querySelectorAll('.card__wrap');
-  console.log(cardItem.length)
-  let paginationLimit = 9
-  let firsPaginationLimit = 0;
+
+  let paginationLimit, firsPaginationLimit
+  paginationLimitToWidth();
+
+  function paginationLimitToWidth() {
+    if (winWidth > 992) {
+       paginationLimit = 9
+       firsPaginationLimit = 0;
+    } else {
+      paginationLimit = 6;
+      firsPaginationLimit = 0;
+    }
+  }
+
+  window.addEventListener('resize', () => {
+    winWidth = window.screen.width
+    paginationLimitToWidth()
+  });
+
   for (let i = firsPaginationLimit; i < cardItem.length; i++) {
     let a = cardItem[i]
     if (i < paginationLimit) {

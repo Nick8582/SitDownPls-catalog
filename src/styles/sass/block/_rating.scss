@@ -20,6 +20,14 @@
   }
 }
 
+@media (max-width: $table-h) {
+  .rating {
+    &__btn {
+      padding: 19px 0 18px;
+    }
+  }
+}
+
 @media (max-width: $table) {
   .rating {
     &__title {

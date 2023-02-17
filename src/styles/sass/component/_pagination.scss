@@ -38,7 +38,15 @@
       color: $white;
       background-color: $primary-light;
     }
+  }
+}
 
-
+@media (max-width: $table-h) {
+  .pagination {
+    &__item {
+      &:not(:last-child) {
+        margin-right: 16px;
+      }
+    }
   }
 }

@@ -165,8 +165,12 @@
     &__list {
       &--rating {
         grid-template-columns: repeat(3, 1fr);
-        margin-bottom: 30px;
+        margin-bottom: 31px;
       }
+    }
+
+    &__rating {
+      top: 31px;
     }
 
     &__discont {
@@ -182,7 +186,6 @@
 
     &__left {
       padding: 0 10px;
-
     }
 
     &__right {
@@ -195,7 +198,7 @@
 
       &--rating {
         align-items: flex-end;
-        margin-bottom: 15px;
+        margin-bottom: 17px;
       }
     }
     &__title {
@@ -205,6 +208,9 @@
     }
     &__price {
       &-modification {
+        margin-bottom: 21px;
+      }
+      &-catalog {
         margin-bottom: 22px;
       }
     }
