@@ -97,13 +97,13 @@
 
 @media (max-width: $table-m) {
   .hero {
+    padding-top: 13px;
     &__title {
       font-size: 20px;
       line-height: 28px;
       padding: 6px 17px;
     }
   }
-
 }
 
 @media (max-width: $mobile) {
@@ -119,6 +119,9 @@
       width: 100%;
       max-width: none;
       padding: 19px 0;
+    }
+    &__btn {
+      max-width: 100%;
     }
   }
 

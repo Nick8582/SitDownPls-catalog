@@ -65,5 +65,8 @@
         'btn';
       grid-template-columns: 1fr;
     }
+    &__text {
+      margin-bottom: 31px;
+    }
   }
 }

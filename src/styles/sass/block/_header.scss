@@ -665,17 +665,11 @@
       grid-template-columns: 1fr;
     }
     &__form {
-      margin-bottom: 16px;
-    }
-    &__icon {
-      top: 14%;
+      position: relative;
+      margin-bottom: 15px;
     }
     &__search {
       border-radius: 10px;
-    }
-    &__btn-search {
-      top: 9%;
-      right: 4%;
     }
   }
 }
@@ -740,13 +734,16 @@
       grid-column-end: 3 span;
       margin-bottom: 10px;
       &-search {
-        top: 9%;
-        right: 10.5%;
+        margin-top: -17px;
+        right: 10.8%;
       }
     }
     &__search {
       padding-top: 17px;
       padding-bottom: 16px;
+    }
+    &__profile {
+      margin-right: 38px;
     }
   }
   .phone {
@@ -754,7 +751,7 @@
   }
   .burger-menu {
     margin-left: 5px;
-    margin-bottom: 9px;
+    margin-bottom: 11px;
   }
   .bottom-menu {
     &__list {

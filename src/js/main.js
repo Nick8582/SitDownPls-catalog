@@ -342,6 +342,7 @@ if (document.querySelector('.card__list--catalog')) {
   window.addEventListener('resize', () => {
     winWidth = window.screen.width
     paginationLimitToWidth()
+    console.log(1)
   });
 
   for (let i = firsPaginationLimit; i < cardItem.length; i++) {

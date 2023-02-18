@@ -231,3 +231,18 @@
     }
   }
 }
+
+@media (max-width: $mobile) {
+  .filter {
+    &__title {
+      padding: 6px 0;
+      margin-bottom: 10px;
+    }
+    &__list {
+      column-gap: 15px;
+    }
+    &__name {
+      min-width: auto;
+    }
+  }
+}

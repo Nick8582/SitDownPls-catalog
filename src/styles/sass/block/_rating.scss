@@ -41,3 +41,11 @@
     }
   }
 }
+
+@media (max-width: $mobile) {
+  .rating {
+    &__title {
+      margin-bottom: 25px;
+    }
+  }
+}

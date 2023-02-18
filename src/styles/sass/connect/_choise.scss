@@ -175,8 +175,10 @@
       &--dropdown {
         top: 73%;
       }
+      &--single {
+        padding-top: 5px;
+      }
       &--filter {
-        padding-left: 7px;
         &.choices {
           &__list {
             &--dropdown {

@@ -263,8 +263,11 @@
   .card {
     &__list {
       &--rating {
-        grid-gap: 18px 16px;
+        grid-gap: 16px 16px;
         margin-bottom: 32px;
+      }
+      &--catalog {
+        grid-gap: 18px 16px;
       }
     }
 
@@ -277,7 +280,7 @@
 
     &__rating {
       font-size: 14px;
-      top: 15px;
+      top: 17px;
       padding-left: 33px;
 
       &::before {
@@ -290,7 +293,7 @@
       margin-bottom: 12px;
       &--rating {
         height: max(22vw, 70px);
-        margin-bottom: 18px;
+        margin-bottom: 20px;
       }
     }
 
@@ -311,10 +314,16 @@
       &-modification {
         margin-bottom: 15px;
       }
+      &-catalog {
+        margin-bottom: 14px;
+      }
     }
 
     &__btn {
       &--rating {
+        padding: 10px;
+      }
+      &-card {
         padding: 10px;
       }
     }

@@ -164,12 +164,15 @@
 
 @media (max-width: $mobile) {
   .btn {
-    &__slider {
+    &--slider {
       max-width: 77px;
       padding-top: 23px;
       width: 100%;
       display: flex;
       margin: 0 auto;
+    }
+    &--primary {
+      padding: 19px 0;
     }
   }
 }
