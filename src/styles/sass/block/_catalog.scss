@@ -145,6 +145,9 @@
 
 @media (max-width: $table) {
   .catalog {
+    &__container {
+      row-gap: 16px;
+    }
     &__filter {
       flex-direction: column;
     }
