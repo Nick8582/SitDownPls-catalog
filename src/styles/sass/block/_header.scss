@@ -306,9 +306,7 @@
 
 .menu-top {
   &__list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    @include listReset;
     display: flex;
     justify-content: space-between;
   }
@@ -406,9 +404,7 @@
 
 .bottom-menu {
   &__list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    @include listReset;
     display: flex;
     justify-content: space-between;
   }
@@ -669,7 +665,7 @@
       margin-bottom: 15px;
     }
     &__search {
-      border-radius: 10px;
+      @include br10;
     }
   }
 }

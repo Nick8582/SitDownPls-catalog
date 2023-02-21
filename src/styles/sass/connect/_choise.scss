@@ -157,7 +157,7 @@
     &__filter {
       .choices {
         &__inner {
-          border-radius: 10px;
+          @include br10;
         }
       }
       &[data-type*=select-one] {

@@ -12,7 +12,7 @@
   &__btn {
     max-width: 296px;
     margin: 0 auto;
-    padding: 19px 0;
+    @include pv19;
     //&-card {
     //  padding-top: 17px;
     //  padding-bottom: 17px;
@@ -34,9 +34,9 @@
       margin-bottom: 28px;
     }
     &__btn {
-      padding: 19px 0;
+      @include pv19;
       &-card {
-        padding: 10px 0;
+        @include pv10;
       }
     }
   }

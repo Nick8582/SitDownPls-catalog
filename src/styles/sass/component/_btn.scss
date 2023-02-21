@@ -6,11 +6,10 @@
     border: 2px solid $primary;
     color: $white;
     background: $primary;
-    border-radius: 10px;
+    @include br10;
     max-width: 188px;
     width: 100%;
-    font-size: 16px;
-    font-weight: 700;
+    @include fs16fw700;
     transition: background-color $transition, border $transition;
     &:hover {
       background-color: $primary-light;
@@ -40,7 +39,7 @@
     color: $primary;
     font-size: 16px;
     line-height: 16px;
-    border-radius: 10px;
+    @include br10;
     max-width: 128px;
     width: 100%;
     padding: 16px 0 17px;
@@ -172,10 +171,10 @@
       margin: 0 auto;
     }
     &--primary {
-      padding: 19px 0;
+      @include pv19;
     }
     &--border {
-      padding: 10px 0;
+      @include pv10;
     }
   }
 }

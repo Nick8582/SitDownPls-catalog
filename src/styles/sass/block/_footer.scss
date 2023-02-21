@@ -33,9 +33,7 @@
 }
 
 .social {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  @include listReset;
   display: flex;
 
   &__link {
@@ -101,9 +99,7 @@
   justify-content: space-between;
 
   &__list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+    @include listReset;
 
     &:nth-child(1) {
       margin-right: -21px;

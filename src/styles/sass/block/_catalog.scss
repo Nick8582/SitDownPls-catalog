@@ -12,26 +12,22 @@
     grid-row: 1/3;
   }
   &__list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    @include listReset;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
   }
   &__title {
-    font-size: 24px;
+    @include fs24;
     grid-column: 2/3;
     grid-row: 1/2;
   }
   &__filter-tag {
     &-list {
-      list-style: none;
+      @include listReset;
       display: flex;
       flex-wrap: wrap;
       min-height: 40px;
-      margin: 0;
-      padding: 0;
       grid-column: 3/4;
       grid-row: 1/2;
     }

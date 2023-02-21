@@ -118,7 +118,7 @@
     &__button {
       width: 100%;
       max-width: none;
-      padding: 19px 0;
+      @include pv19;
     }
     &__btn {
       max-width: 100%;

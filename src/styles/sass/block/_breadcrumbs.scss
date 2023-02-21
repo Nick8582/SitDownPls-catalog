@@ -2,9 +2,7 @@
   margin-bottom: 30px;
   padding-top: 2px;
   &__list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    @include listReset;
     display: flex;
   }
   &__item {

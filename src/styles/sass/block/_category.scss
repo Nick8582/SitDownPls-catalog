@@ -5,19 +5,17 @@
   }
 
   &__list {
+    @include listReset;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-gap: 32px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
   }
 
   &__item {
+    @include br10;
     grid-column-end: span 2;
     padding: 26px 30px 25px;
     background-color: $gray-light;
-    border-radius: 10px;
     display: flex;
     flex-direction: column;
 
@@ -32,9 +30,8 @@
 
   &__sub {
     &-list {
-      list-style: none;
-      margin: 0 0 13px;
-      padding: 0;
+      @include listReset;
+      margin-bottom: 13px;
       display: flex;
       flex-wrap: wrap;
     }
@@ -46,9 +43,9 @@
     }
   }
   &__name {
+    @include fs24;
     margin: 0 0 30px;
     padding: 0;
-    font-size: 24px;
     font-weight: 400;
     line-height: 33px;
     color: $black;
@@ -65,10 +62,9 @@
     transition: color $transition;
 
     &-catalog {
+      @include fs16fw700;
       color: $primary;
-      font-size: 16px;
       line-height: 30px;
-      font-weight: 700;
       display: flex;
       justify-content: space-between;
       max-width: 108px;
@@ -167,7 +163,7 @@
   }
 
   &__name-link {
-    font-size: 24px;
+    @include fs24;
     font-weight: 400;
     line-height: 32px;
     color: $black;

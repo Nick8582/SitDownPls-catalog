@@ -1,11 +1,6 @@
 section.breadcrumbs
   .container
     ul.breadcrumbs__list
-      li.breadcrumbs__item
-        a.breadcrumbs__link(href="index.html") Главная
-      li.breadcrumbs__item
-        a.breadcrumbs__link(href="catalog.html") Каталог
-      li.breadcrumbs__item
-        a.breadcrumbs__link(href="catalog.html") Диваны
-      li.breadcrumbs__item
-        a.breadcrumbs__link(href="catalog.html") Прямые диваны
+      each data in breadcrumbsLinks
+        li.breadcrumbs__item
+          a.breadcrumbs__link(href=`${data.link}`)= data.title

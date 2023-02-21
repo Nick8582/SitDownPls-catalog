@@ -16,9 +16,7 @@
   }
 
   &__list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    @include listReset;
   }
 
   &__param {
@@ -43,9 +41,7 @@
   &__category {
 
     &-list {
-      list-style: none;
-      margin: 0;
-      padding: 0;
+      @include listReset;
       display: flex;
       flex-direction: column;
     }
@@ -151,7 +147,7 @@
 
     &__name {
       background-color: $gray-light;
-      border-radius: 10px;
+      @include br10;
       max-width: 187px;
       padding: 5px 14px;
       display: flex;

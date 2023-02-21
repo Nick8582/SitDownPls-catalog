@@ -34,7 +34,7 @@
     padding-bottom: 150px;
     margin-bottom: 70px;
     &__btn {
-      padding: 19px 0;
+      @include pv19;
     }
   }
 }
@@ -71,7 +71,7 @@
       padding: 0 12px;
     }
     &__title {
-      font-size: 24px;
+      @include fs24;
       margin: 0 0 5px;
     }
     &__subtitle {
