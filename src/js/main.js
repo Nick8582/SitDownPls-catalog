@@ -421,3 +421,43 @@ if (document.querySelector('.card__list--catalog')) {
     }
   }
 }
+
+if (document.querySelector('.product')) {
+  const thumbsSlider = new Swiper('.product__thumbs', {
+    slidesPerView: 'auto',
+    slideToClickedSlide: true,
+    freeMode: true,
+    watchSlidesProgress: true,
+    a11y: {
+      slideLabelMessage: 'Миниатюра фото товара {{index}} из {{slidesLength}}',
+      prevSlideMessage: 'Предыдущие миниатюры',
+      nextSlideMessage: 'Следующие миниатюры',
+    },
+    breakpoints: {
+      320: {
+        spaceBetween: 38,
+        direction: 'horizontal',
+      },
+      768: {
+        spaceBetween: 18,
+        direction: 'vertical',
+      },
+      1024: {
+        spaceBetween: 38,
+        direction: 'horizontal',
+      },
+    },
+  });
+
+  new Swiper('.product__photo', {
+    spaceBetween: 16,
+    thumbs: {
+      swiper: thumbsSlider,
+    },
+    a11y: {
+      slideLabelMessage: 'Фото товара {{index}} из {{slidesLength}}',
+      prevSlideMessage: 'Предыдущее фото',
+      nextSlideMessage: 'Следующее фото',
+    },
+  })
+}
