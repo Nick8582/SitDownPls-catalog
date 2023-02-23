@@ -1,0 +1,11 @@
+.attribute {
+  &__name {
+    color: $gray;
+    font-size: 14px;
+    line-height: 1.78;
+  }
+  &__value {
+    font-size: 14px;
+    line-height: 1.78;
+  }
+}

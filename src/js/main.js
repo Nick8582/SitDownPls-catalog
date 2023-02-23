@@ -95,10 +95,11 @@ if (document.querySelector('.special__slider')) {
   });
 }
 
-let winWidth = window.screen.width;
+let winWidth = window.screen.width; //Переменная отвечающая за ширину экрана
+
 if (document.querySelector('.rating')) {
-  const ratingClass = '.rating';
-  const cardDisplayClass = '.card__wrap';
+  const rating = document.querySelector('.rating');
+  const cardDisplay = rating.querySelectorAll('.card__wrap');
   const btnRating = document.querySelector('.rating__btn');
 
   const resize = (a, b) => {
@@ -111,7 +112,7 @@ if (document.querySelector('.rating')) {
           btnRating.style.display = 'block';
         }
       }
-    } else if (winWidth < 1310) {
+    } else {
       for (let i = 0; i < a.length; i++) {
         if (i > 5) {
           a[i].style.display = 'none';
@@ -125,10 +126,7 @@ if (document.querySelector('.rating')) {
       }
       btnRating.style.display = 'none';
     }
-    console.log(winWidth)
   }
-  const rating = document.querySelector(ratingClass);
-  const cardDisplay = rating.querySelectorAll(cardDisplayClass);
   resize(cardDisplay);
   window.addEventListener('resize', () => {
     resize(cardDisplay);
@@ -140,15 +138,12 @@ if (document.querySelector('.rating')) {
 }
 
 (() => {
-
   tippy('.tooltip-js', {
     theme: 'project',
     maxWidth: 157,
     trigger: "mouseenter focus click",
     interactive: true,
   });
-
-
 })()
 
 if (document.querySelector(".contact__input")) {
@@ -303,7 +298,7 @@ if (document.querySelector('.js-filter-price-options')) {
         spanTag.classList.add(`catalog__tag${colorTag}`);
         const btnCloseTag = document.createElement('button');
         btnCloseTag.classList.add('close-btn', 'catalog__tag-close-btn')
-        btnCloseTag.addEventListener('click',()=> {
+        btnCloseTag.addEventListener('click', () => {
           btnCloseTag.parentElement.parentElement.remove();
           e.checked = false;
         })
@@ -326,23 +321,20 @@ if (document.querySelector('.card__list--catalog')) {
   const cardCatalog = document.querySelector('.card__list--catalog');
   const cardItem = cardCatalog.querySelectorAll('.card__wrap');
 
-  let paginationLimit, firsPaginationLimit
-  paginationLimitToWidth();
+  let paginationLimit, firsPaginationLimit = 0;
+  paginationLimitToWidth()
 
   function paginationLimitToWidth() {
     if (winWidth > 992) {
-       paginationLimit = 9
-       firsPaginationLimit = 0;
+      paginationLimit = 9;
     } else {
       paginationLimit = 6;
-      firsPaginationLimit = 0;
     }
   }
 
   window.addEventListener('resize', () => {
     winWidth = window.screen.width
     paginationLimitToWidth()
-    console.log(1)
   });
 
   for (let i = firsPaginationLimit; i < cardItem.length; i++) {
@@ -364,14 +356,11 @@ if (document.querySelector('.card__list--catalog')) {
     btnPagination.classList.add('pagination__link');
     btnPagination.textContent = data;
     btnPagination.setAttribute('value', data);
-
     btnPagination.onclick = function (e) {
       e.preventDefault();
       clickFunctionTab(data);
       btnPagination.classList.add('active');
-
     }
-
     containerCatalogPagination.append(liPagination);
     liPagination.append(btnPagination);
   }
@@ -394,7 +383,6 @@ if (document.querySelector('.card__list--catalog')) {
   document.addEventListener('DOMContentLoaded', firstLoad);
 
   function clickFunctionTab(data) {
-
     if (data === 1) {
       catalogCardVisible(firsPaginationLimit, paginationLimit)
     } else if (data === 2) {
@@ -404,10 +392,8 @@ if (document.querySelector('.card__list--catalog')) {
     }
     let btnPaginationSearch = document.querySelectorAll('.pagination__link');
     for (let i = 0; i < btnPaginationSearch.length; i++) {
-
       btnPaginationSearch[i].classList.remove('active');
     }
-
   }
 
   function catalogCardVisible(a, b) {

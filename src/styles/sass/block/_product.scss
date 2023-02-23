@@ -1,7 +1,7 @@
 .product {
   display: grid;
   grid-template-columns: repeat(12,1fr);
-  grid-gap: 16px 33px;
+  grid-gap: 14px 33px;
   &__photo {
     grid-column: 1/7;
     height: 245px;
@@ -12,7 +12,8 @@
     height: 81px;
     width: 100%;
     background-color: $gray-light-2;
-    padding: 10px;
+    padding: 10px 23px;
+    margin-bottom: 19px;
     &-slide {
       max-width: 137px;
       height: 100%;
@@ -74,16 +75,45 @@
   }
   &__description {
     grid-column: 1/7;
+    margin-bottom: 20px;
+    &-title {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 1;
+      margin-bottom: 7px;
+    }
+    &-text {
+      font-size: 14px;
+      margin: 0;line-height: 1.8;
+      &:not(:last-child) {
+        margin-bottom: 7px;
+      }
+    }
   }
   &__schemes {
     grid-column: 1/7;
+    display: flex;
+    align-items: flex-end;
+    max-width: 528px;
+  }
+  &__scheme {
+    &:not(:last-child) {
+      margin-right: 32px;
+    }
   }
   &__attributes {
     grid-column: 7/13;
     grid-row: 3/5;
+    @include listReset;
+    display: flex;
+    flex-direction: column;
   }
   &__list {
     @include listReset;
   }
-
+  &__attribute {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 32px;
+  }
 }
