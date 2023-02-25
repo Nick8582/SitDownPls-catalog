@@ -108,12 +108,10 @@
     display: flex;
     flex-direction: column;
   }
+  &__attribute {
+    display: flex;
+  }
   &__list {
     @include listReset;
-  }
-  &__attribute {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-gap: 32px;
   }
 }
