@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: repeat(12,1fr);
   grid-gap: 14px 33px;
+  margin-bottom: 80px;
   &__photo {
     grid-column: 1/7;
     height: 245px;
@@ -107,9 +108,14 @@
     @include listReset;
     display: flex;
     flex-direction: column;
+    padding-top: 4px;
+    padding-bottom: 6px;
   }
   &__attribute {
     display: flex;
+    &:not(:last-child) {
+      margin-bottom: 9px;
+    }
   }
   &__list {
     @include listReset;

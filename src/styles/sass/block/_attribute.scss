@@ -2,7 +2,7 @@
   &__name {
     color: $gray;
     font-size: 14px;
-    line-height: 1.78;
+    //line-height: 1.78;
   }
   &__dotted {
     flex-grow: 2;
@@ -13,8 +13,8 @@
   &__value {
     max-width: 296px;
     min-width: 216px;
-    width: 15vw;
+    width: 48vw;
     font-size: 14px;
-    line-height: 1.78;
+    //line-height: 1.78;
   }
 }
