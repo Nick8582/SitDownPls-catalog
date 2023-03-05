@@ -447,3 +447,33 @@ if (document.querySelector('.product')) {
     },
   })
 }
+
+if (document.querySelector('.alike')) {
+  const swiperSpecial = new Swiper('.alike__slider', {
+    effect: 'horizontal',
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    spaceBetween: 32,
+    navigation: {
+      nextEl: '.alike__button-next',
+      prevEl: '.alike__button-prev',
+    },
+    breakpoints: {
+      501: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        spaceBetween: 32,
+      },
+      993: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+        spaceBetween: 32,
+      },
+      1311: {
+        slidesPerView: 4,
+        slidesPerGroup: 4,
+        spaceBetween: 32,
+      },
+    }
+  });
+}
