@@ -451,9 +451,9 @@ if (document.querySelector('.product')) {
 if (document.querySelector('.alike')) {
   const swiperSpecial = new Swiper('.alike__slider', {
     effect: 'horizontal',
-    slidesPerView: 1,
-    slidesPerGroup: 1,
-    spaceBetween: 32,
+    slidesPerView: 2,
+    slidesPerGroup: 2,
+    spaceBetween: 16,
     navigation: {
       nextEl: '.alike__button-next',
       prevEl: '.alike__button-prev',

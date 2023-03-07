@@ -121,3 +121,37 @@
     @include listReset;
   }
 }
+
+@media (max-width: $table-h) {
+  .product {
+    grid-template-columns: repeat(9, 1fr);
+    grid-gap: 8px 32px;
+    margin-bottom: 67px;
+    &__photo {
+      height: 218px;
+      grid-column: 1/6;
+    }
+    &__thumbs {
+      grid-column: 1/6;
+    }
+    &__info {
+      grid-column: 6/10;
+    }
+    &__description {
+      grid-column: 1/6;
+      &-title {
+        padding-top: 5px;
+      }
+    }
+    &__schemes {
+      grid-column: 1/6;
+    }
+    &__attributes {
+      grid-column: 6/10;
+      padding-top: 10px;
+    }
+    &__rating {
+      padding: 24px 0 0 25px;
+    }
+  }
+}
