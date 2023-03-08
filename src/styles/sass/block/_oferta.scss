@@ -1,78 +1,18 @@
 .oferta {
-  margin-bottom: 72px;
-
+  margin-bottom: 70px;
   &__container {
     display: grid;
-    grid-template-areas:
-    "title btn"
-    "slider slider";
-    grid-gap: 25px;
-    grid-template-columns: 1fr 77px;
+    grid-template-columns: repeat(12,1fr);
+    grid-gap: 32px;
   }
-
   &__title {
-    grid-area: title;
+    grid-column: 11 span;
   }
-
+  &__btn {
+    padding: 20px;
+  }
   &__slider {
-    width: 100%;
-    grid-area: slider;
-  }
-
-  &__card {
-    display: flex;
-    flex-direction: column;
-    max-width: 296px;
-    @include br10;
-    background: $gray-light;
-    padding: 38px 30px 30px;
-    position: relative;
-
-    &-big {
-      max-width: 624px;
-    }
-  }
-}
-
-@media (max-width: $table-h) {
-  .oferta {
-    margin-bottom: 71px;
-    &__card {
-      max-width: 100%;
-      padding: 66px 20px 30px;
-    }
-
-  }
-}
-
-@media (max-width: $table) {
-  .oferta {
-    &__card {
-      padding-top: 70px;
-    }
-
-  }
-}
-
-@media (max-width: $mobile) {
-  .oferta {
-    &__container {
-      grid-template-areas: "title"
-      "slider"
-      "btn";
-      grid-template-columns: 1fr;
-      grid-gap: 26px;
-    }
-
-    &__card {
-      padding-top: 68px;
-    }
-
-    &__btn {
-      margin: 0 auto;
-      max-width: 77px;
-      width: 100%;
-      padding-top: 22px;
-    }
+    grid-column: 1/12;
+    order: 3;
   }
 }
