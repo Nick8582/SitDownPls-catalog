@@ -3,16 +3,51 @@
   &__container {
     display: grid;
     grid-template-columns: repeat(12,1fr);
-    grid-gap: 32px;
+    grid-gap: 16px 32px;
   }
   &__title {
+    grid-row: 1;
     grid-column: 11 span;
   }
   &__btn {
+    grid-column: 1 span;
+    grid-row: 1;
     padding: 20px;
   }
   &__slider {
-    grid-column: 1/12;
+    width: 100%;
+    grid-column: 12 span;
     order: 3;
+  }
+  &__list {
+    @include listReset;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  &__item {
+    display: flex;
+    height: 100%;
+    width: max-content !important;
+    &:nth-child(3n-1) {
+      width: calc(100% - (32px + 296px) * 2)!important;
+      .oferta__card {
+        width: 100%;
+      }
+    }
+  }
+  &__card {
+    position: relative;
+    height: 100%;
+    min-height: 511px;
+    width: 296px;
+    background-color: $gray-light;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 20px 30px 30px 30px;
+    border-radius: 10px;
   }
 }
