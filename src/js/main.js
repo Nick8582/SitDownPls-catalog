@@ -58,7 +58,7 @@ if (document.querySelector('.oferta__slider')) {
         spaceBetween: 33,
       },
       1311: {
-        slidesPerView: 3,
+        slidesPerView: 'auto',
         slidesPerGroup: 3,
         spaceBetween: 32,
       },

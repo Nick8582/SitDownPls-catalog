@@ -106,26 +106,6 @@
   }
 
   &__price {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 22px;
-
-    &-new {
-      color: $secondary;
-      font-size: 18px;
-      font-weight: 400;
-      line-height: 23px;
-      margin-right: 30px;
-    }
-
-    &-old {
-      color: $gray;
-      font-size: 16px;
-      line-height: 23px;
-      margin-right: auto;
-      text-decoration-line: line-through;
-    }
-
     &-rating {
       color: $gray-shade;
       margin-bottom: 2px;
