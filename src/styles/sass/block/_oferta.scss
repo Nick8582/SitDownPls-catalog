@@ -153,6 +153,7 @@
 
 @media (max-width: $table-h) {
   .oferta {
+    grid-template-columns: repeat(9, 1fr);
     &__title {
       grid-column: 1/9;
     }
@@ -161,14 +162,24 @@
       grid-column: 1/10;
     }
 
-    &__schema {
-      display: none;
+    .card {
+      &__img>* {
+        object-position: 50% 82%;
+      }
+      &__schema {
+        display: none;
+      }
+      &__info {
+        justify-content: flex-end;
+      }
     }
   }
 }
 
 @media (max-width: $table) {
   .oferta {
+    grid-template-columns: repeat(6, 1fr);
+    margin-bottom: 21px;
     &__title {
       grid-column: 1/6;
       font-size: 32px;
@@ -178,11 +189,19 @@
       grid-column: 1 / 7;
       padding-bottom: 48px;
     }
+    .card__img {
+      height: 212px;
+      margin-bottom: 5px;
+      > * {
+        object-position: 50% 100%;
+      }
+    }
   }
 }
 
 @media (max-width: $table-m) {
   .oferta {
+    margin-bottom: 69px;
     &__title {
       font-size: 24px;
       grid-column: 1/7;
@@ -200,6 +219,9 @@
         top: auto;
         bottom: 0;
       }
+    }
+    &__btn {
+      padding: 17px 0;
     }
   }
 }

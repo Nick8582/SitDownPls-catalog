@@ -31,7 +31,7 @@
     background: url('../images/promo-1-1024.jpg') no-repeat;
     background-position: center;
     background-size: cover;
-    padding-bottom: 150px;
+    padding-bottom: 149px;
     margin-bottom: 70px;
     &__btn {
       @include pv19;
@@ -64,21 +64,24 @@
 
 @media (max-width: $mobile) {
   .promo {
-    background: url('../images/promo-1-320.jpg') top center/100% 62.7% no-repeat;
-    padding: 32px 0;
-    margin-bottom: 38px;
+    background: url('../images/promo-1-320.jpg') top center/100% 62.5% no-repeat;
+    padding: 34px 0;
+    margin-bottom: 36px;
     &__container {
       padding: 0 12px;
     }
     &__title {
       @include fs24;
-      margin: 0 0 5px;
+      margin: 0 0 3px;
     }
     &__subtitle {
       font-size: 16px;
       line-height: 19px;
       max-width: 200px;
       margin-bottom: 143px;
+    }
+    &__btn {
+      padding-bottom: 18px;
     }
   }
 }

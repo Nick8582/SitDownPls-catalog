@@ -50,7 +50,7 @@ if (document.querySelector('.oferta__slider')) {
       501: {
         slidesPerView: 2,
         slidesPerGroup: 2,
-        spaceBetween: 34,
+        spaceBetween: 32,
       },
       993: {
         slidesPerView: 3,

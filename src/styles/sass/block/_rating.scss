@@ -3,6 +3,12 @@
   &__cards {
     display: flex;
     flex-direction: column;
+    .card__img {
+      margin-bottom: 14px;
+      height: 125px;
+      object-fit: contain;
+      object-position: bottom;
+    }
   }
   &__title {
     grid-column-start: 1;
@@ -13,23 +19,30 @@
     max-width: 296px;
     margin: 0 auto;
     @include pv19;
-    //&-card {
-    //  padding-top: 17px;
-    //  padding-bottom: 17px;
-    //}
   }
 }
 
 @media (max-width: $table-h) {
   .rating {
     &__btn {
-      padding: 19px 0 18px;
+      padding: 19px 0;
+    }
+    &__cards {
+      .card__img {
+        margin-bottom: 16px;
+      }
     }
   }
 }
 
 @media (max-width: $table) {
   .rating {
+    &__cards {
+      .card__img {
+        margin-bottom: 20px;
+      }
+    }
+
     &__title {
       margin-bottom: 28px;
     }
@@ -45,7 +58,14 @@
 @media (max-width: $mobile) {
   .rating {
     &__title {
-      margin-bottom: 25px;
+      margin-bottom: 27px;
+    }
+    &__cards {
+      .card__img {
+        height: 73px;
+        object-position: center;
+        margin-bottom: 1px;
+      }
     }
   }
 }

@@ -52,7 +52,7 @@
       margin-bottom: 30px;
     }
     &__picture {
-      margin-bottom: 26px;
+      margin-bottom: 27px;
     }
   }
 }
@@ -64,12 +64,19 @@
         'slider'
         'btn';
       grid-template-columns: 1fr;
+      grid-gap: 0;
     }
     &__text {
-      margin-bottom: 31px;
+      margin-bottom: 29px;
     }
     &__btn {
       padding: 17px 0;
+    }
+    &__title {
+      margin-bottom: 27px;
+    }
+    &__slider {
+      margin-bottom: 14px;
     }
   }
 }

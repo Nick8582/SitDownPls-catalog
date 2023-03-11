@@ -71,7 +71,7 @@
     background-size: 16px;
     background-position: left center;
     position: absolute;
-    top: 31px;
+    top: 30px;
     left: 30px;
   }
 
@@ -87,7 +87,7 @@
   }
 
   &__discription {
-    padding: 0 20px;
+    padding: 0 15px;
   }
 
   &__title {
@@ -132,12 +132,16 @@
     &__list {
       &--rating {
         grid-template-columns: repeat(3, 1fr);
-        margin-bottom: 31px;
+        margin-bottom: 32px;
+        grid-gap: 34px 32px;
       }
     }
 
-    &__rating {
-      top: 31px;
+    &__item {
+      min-height: 415px;
+      &--rating {
+        padding-bottom: 30px;
+      }
     }
 
     &__discont {
@@ -175,7 +179,7 @@
     }
     &__price {
       &-modification {
-        margin-bottom: 21px;
+        margin-bottom: 23px;
       }
       &-catalog {
         margin-bottom: 22px;
@@ -195,10 +199,6 @@
         grid-gap: 32px;
         margin-bottom: 30px;
       }
-    }
-
-    &__rating {
-      top: 33px;
     }
 
     &__item {
@@ -242,13 +242,17 @@
       &--rating {
         min-height: 270px;
         padding: 16px;
+        padding-top: 33px;
       }
     }
 
     &__rating {
       font-size: 14px;
-      top: 17px;
-      padding-left: 33px;
+      top: 15px;
+      left:14px;
+      padding-left: 20px;
+      background-size: 14px;
+      background-position: 5% 30%;
 
       &::before {
         top: -1px;
@@ -273,13 +277,14 @@
       &--rating {
         font-size: 16px;
         line-height: 21px;
-        margin-bottom: 17px;
+        margin-bottom: 18px;
       }
     }
 
     &__price {
       &-modification {
-        margin-bottom: 15px;
+        margin-bottom: 18px;
+        line-height: 1;
       }
       &-catalog {
         margin-bottom: 15px;
