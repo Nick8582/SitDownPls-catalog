@@ -421,16 +421,18 @@ if (document.querySelector('.product')) {
       prevSlideMessage: 'Предыдущие миниатюры',
       nextSlideMessage: 'Следующие миниатюры',
     },
+    direction: 'horizontal',
+    spaceBetween: 40,
     breakpoints: {
-      320: {
-        spaceBetween: 38,
-        direction: 'horizontal',
-      },
-      768: {
-        spaceBetween: 18,
+      501: {
+        spaceBetween: 17,
         direction: 'vertical',
       },
-      1024: {
+      993: {
+        spaceBetween: 18,
+        direction: 'horizontal',
+      },
+      1311: {
         spaceBetween: 38,
         direction: 'horizontal',
       },

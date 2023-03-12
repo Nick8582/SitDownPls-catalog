@@ -10,7 +10,7 @@ section.product.container
       each photo in [1,2,3,4,5]
         li.slide.product__thumbs-slide.swiper-slide
           picture.slide__picture
-            img.slide__img(src=`images/product-photo-${photo}.png` alt=`Фото ${photo}`)
+            img.slide__img.slide__img--thumbs(src=`images/product-photo-${photo}.png` alt=`Фото ${photo}`)
   .product__info
     .product__rating
       span.product__rating-text= '4,8'

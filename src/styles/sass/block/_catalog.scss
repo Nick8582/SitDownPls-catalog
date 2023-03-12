@@ -91,6 +91,14 @@
       }
     }
   }
+  .card__img {
+    margin-top: auto;
+    margin-bottom: 13px;
+    max-height: 125px;
+    height: 100%;
+    object-position: bottom;
+    object-fit: contain;
+  }
   &__cards {
     grid-column: 2/4;
     grid-row: 2/4;
@@ -136,6 +144,12 @@
     &__banner {
       display: none;
     }
+    .card__item--rating {
+      min-height: 420px;
+    }
+    .card__img {
+      margin-bottom: 17px;
+    }
   }
 }
 
@@ -146,6 +160,9 @@
     }
     &__filter {
       flex-direction: column;
+    }
+    .card__item--rating {
+      min-height: 278px;
     }
   }
 }

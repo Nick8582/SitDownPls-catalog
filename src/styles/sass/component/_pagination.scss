@@ -48,3 +48,9 @@
     }
   }
 }
+
+@media (max-width: $table) {
+  .pagination {
+    margin-top: 15px;
+  }
+}

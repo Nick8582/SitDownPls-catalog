@@ -11,3 +11,13 @@
     object-fit: contain;
   }
 }
+
+@media (max-width: $table) {
+  .slide {
+    &__img {
+      &--thumbs {
+        max-height: 60px;
+      }
+    }
+  }
+}
