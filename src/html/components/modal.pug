@@ -1,0 +1,19 @@
+.modal.show
+  .modal__container.container
+    .modal__window.modal__window--buy.show
+      button.modal__close-btn
+        span.modal__close-icon
+      h2.modal__title Купить в один клик
+      p.modal__description Чтобы оформить заказ — заполните формы ниже и наш менеджер свяжется с вами в течении часа.
+      form.modal__form.form
+        .modal__input-wrapper.form__item
+          input.modal__input.form__input(placeholder="Как вас зовут?" name="name" type="text" data-validate-field="name")
+        .modal__input-wrapper.form__item
+          input.modal__input.form__input(placeholder="Ваш телефон" name="phone" type="tel" data-validate-field="tel" data-validate-rules="phone")
+        button.btn.btn--primary.modal__btn(type="submit") Отправить
+        label.modal__label.custom.custom--check-label(for="politic")
+          input.modal__check.custom.custom--check(type="checkbox" checked="checked" id="politic")
+          span.modal__check-description.custom.custom--checkbox Принимаю
+            a.modal__link(href='#') пользовательское соглашение
+
+
