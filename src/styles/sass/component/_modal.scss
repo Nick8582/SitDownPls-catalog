@@ -17,6 +17,12 @@
   &__container {
     max-width: 654px;
     width: 100%;
+    @media (max-width: $table-h) {
+      padding: 0 15px;
+    }
+    @media (max-width: $mobile) {
+      padding: 0 12px;
+    }
   }
   &__window {
     display: none;
@@ -29,6 +35,9 @@
     border-radius: 10px;
     padding: 30px;
     overflow: hidden;
+    @media (max-width: $mobile) {
+      padding: 30px 16px;
+    }
     &.show {
       display: flex;
       flex-direction: column;
@@ -44,6 +53,12 @@
       width: 22px;
       height: 22px;
       cursor: pointer;
+      @media (max-width: $mobile) {
+        right: 13px;
+        top: 11px;
+        width: 19px;
+        height: 19px;
+      }
     }
     &-icon {
       position: absolute;
@@ -55,6 +70,10 @@
       border-radius: 1px;
       background-color: $gray;
       transform: translateX(-50%) rotate(45deg);
+      @media (max-width: $mobile) {
+        height: 1px;
+        width: 15px;
+      }
       &::before {
         content: '';
         position: absolute;
@@ -63,6 +82,10 @@
         border-radius: 1px;
         background-color: $gray;
         transform: translateX(-50%) rotate(90deg);
+        @media (max-width: $mobile) {
+          height: 1px;
+          width: 15px;
+        }
       }
     }
   }
@@ -71,6 +94,9 @@
     line-height: 1;
     font-weight: 400;
     margin-bottom: 10px;
+    @media (max-width: $mobile) {
+      font-size: 24px;
+    }
   }
   &__description {
     font-size: 14px;
@@ -79,6 +105,12 @@
     max-width: 350px;
     margin-right: auto;
     margin-bottom: 29px;
+    @media (max-width: $table-h) {
+      margin-bottom: 30px;
+    }
+    @media (max-width: $mobile) {
+      margin-bottom: 16px;
+    }
   }
   &__form {
     width: 100%;
@@ -87,6 +119,9 @@
     padding: 15px 0;
     max-width: 160px;
     margin-bottom: 14px;
+  }
+  &__check-description {
+    font-size: 14px;
   }
 }
 
