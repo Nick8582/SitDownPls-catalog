@@ -36,7 +36,11 @@
     padding: 30px;
     overflow: hidden;
     @media (max-width: $mobile) {
-      padding: 30px 16px;
+      padding-top: 30px;
+      padding-left: 16px;
+      padding-right: 10px;
+      padding-bottom: 26px;
+      min-height: 385px;
     }
     &.show {
       display: flex;
@@ -119,9 +123,23 @@
     padding: 15px 0;
     max-width: 160px;
     margin-bottom: 14px;
+    @media (max-width: $mobile) {
+      margin-bottom: 13px;
+    }
   }
   &__check-description {
     font-size: 14px;
+    @media (max-width: $mobile) {
+      font-size: 12px;
+    }
+  }
+  &__input {
+    &-wrapper {
+      @media (max-width: $mobile) {
+        margin-bottom: 17px;
+        padding-right: 6px;
+      }
+    }
   }
 }
 
