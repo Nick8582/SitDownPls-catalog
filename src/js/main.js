@@ -4,14 +4,14 @@ if (document.querySelector('.header')) {
     searchEnabled: !1,
     itemSelectText: "",
     shouldSort: !1,
-    classNames: { containerOuter: "choices choices__region", list: "choices__list--region", flippedState: "" }
+    classNames: {containerOuter: "choices choices__region", list: "choices__list--region", flippedState: ""}
   });
   let fil = document.querySelector(".header__filter");
   new Choices(fil, {
     searchEnabled: !1,
     itemSelectText: "",
     shouldSort: !1,
-    classNames: { containerOuter: "choices choices__filter", list: "choices__list--filter", flippedState: "" }
+    classNames: {containerOuter: "choices choices__filter", list: "choices__list--filter", flippedState: ""}
   });
   const burger = document.querySelector('.burger-menu');
   const menu = document.querySelector('.bottom-menu');
@@ -25,9 +25,9 @@ if (document.querySelector('.header')) {
 
 if (document.querySelector('.hero__slider')) {
   const swiperHero = new Swiper('.hero__slider', {
-    autoplay: { delay: 4000 },
+    autoplay: {delay: 4000},
     effect: "fade",
-    fadeEffect: { crossFade: true },
+    fadeEffect: {crossFade: true},
     loop: true,
     pagination: {
       el: '.swiper-pagination-hero',
@@ -486,20 +486,27 @@ if (document.querySelector('.alike')) {
 if (document.querySelector('.product__btn-sail')) {
   const productBtnSail = document.querySelector('.product__btn-sail');
   const buyWindow = document.querySelector('.modal__window--buy');
+  const successWindow = document.querySelector('.modal__window--success');
   const modalShadowWindow = document.querySelector('.modal');
-  const closeModalBuy = buyWindow.querySelector('.modal__close-btn');
-  const modalContainerBuy = document.querySelector('.')
+  const closeModal = document.querySelectorAll('.modal__close-btn');
+  const modalContainerBuy = document.querySelector('.modal__container--buy');
+  const modalContainerSuccess = document.querySelector('.modal__container--success');
 
   productBtnSail.addEventListener('click', (e) => {
     e.preventDefault();
     modalShadowWindow.classList.add('show');
     buyWindow.classList.add('show');
+    modalContainerBuy.classList.add('show');
   });
 
-  closeModalBuy.addEventListener('click', () => {
-    modalShadowWindow.classList.remove('show');
-    buyWindow.classList.remove('show');
-  });
+  for(let i = 0; i < closeModal.length; i++) {
+    closeModal[i].addEventListener('click', () => {
+      modalShadowWindow.classList.remove('show');
+      buyWindow.classList.remove('show');
+      modalContainerBuy.classList.remove('show');
+      modalContainerSuccess.classList.remove('show');
+    });
+  }
 
   const selector = document.querySelector("input[type='tel']")
 
@@ -540,7 +547,10 @@ if (document.querySelector('.product__btn-sail')) {
         if (xhr.readyState === 4) {
           if (xhr.status === 200) {
             console.log('Отправлено');
+            modalContainerBuy.classList.remove('show');
             buyWindow.classList.remove('show');
+            modalContainerSuccess.classList.add('show');
+            successWindow.classList.add('show');
           }
         }
       }

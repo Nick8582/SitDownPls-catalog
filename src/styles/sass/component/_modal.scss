@@ -28,6 +28,13 @@
       }
     }
 
+    &--success {
+      display: none;
+      &.show {
+        display: block;
+      }
+    }
+
     @media (max-width: $table-h) {
       padding: 0 15px;
     }

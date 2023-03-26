@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 require 'phpmailer/PHPMailer.php';
 require 'phpmailer/SMTP.php';
@@ -7,7 +7,7 @@ require 'phpmailer/Exception.php';
 $c = true;
 
 $title = "Тема письма";
-foreach ($_POST as $key => $value) { 
+foreach ($_POST as $key => $value) {
   if( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject") {
       $body .= "
       ". ( ($c = !$c) ? '<tr>':'<tr style="background-color: #f8f8f8;">') . "
@@ -29,11 +29,11 @@ try {
 
   $mail->Host ='smtp.gmail.com';
   $mail->Username = '89172111013q@gmail.com';
-  $mail->Password = 'aislyieietcohbgx';
+  $mail->Password = 'tbgzjvsthomhqisl';
   $mail->SMTPSecure = 'ssl';
   $mail->Port = 465;
 
-  $mail->setForm('89172111013q@gmail.com', 'Заявка с сайта Blanchart');
+  $mail->setForm('89172111013q@gmail.com', 'Заявка с сайта SDP.ru');
 
   // Получатели письма
   $mail->addAddress('dracon1998@yandex.ru');
