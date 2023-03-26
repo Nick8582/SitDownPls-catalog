@@ -4,14 +4,14 @@ if (document.querySelector('.header')) {
     searchEnabled: !1,
     itemSelectText: "",
     shouldSort: !1,
-    classNames: {containerOuter: "choices choices__region", list: "choices__list--region", flippedState: ""}
+    classNames: { containerOuter: "choices choices__region", list: "choices__list--region", flippedState: "" }
   });
   let fil = document.querySelector(".header__filter");
   new Choices(fil, {
     searchEnabled: !1,
     itemSelectText: "",
     shouldSort: !1,
-    classNames: {containerOuter: "choices choices__filter", list: "choices__list--filter", flippedState: ""}
+    classNames: { containerOuter: "choices choices__filter", list: "choices__list--filter", flippedState: "" }
   });
   const burger = document.querySelector('.burger-menu');
   const menu = document.querySelector('.bottom-menu');
@@ -25,9 +25,9 @@ if (document.querySelector('.header')) {
 
 if (document.querySelector('.hero__slider')) {
   const swiperHero = new Swiper('.hero__slider', {
-    autoplay: {delay: 4000},
+    autoplay: { delay: 4000 },
     effect: "fade",
-    fadeEffect: {crossFade: true},
+    fadeEffect: { crossFade: true },
     loop: true,
     pagination: {
       el: '.swiper-pagination-hero',
@@ -148,13 +148,15 @@ if (document.querySelector('.rating')) {
   });
 })()
 
+if (document.querySelector("input[type='tel']")) {
+  let selector = document.querySelector("input[type='tel']");
+  let im = new Inputmask("+7 (999) 999-99-99");
+  im.mask(selector);
+}
+
 if (document.querySelector(".contact__input")) {
   let contactButtons = document.querySelector('.contact__btn');
   let contactSuccess = document.querySelectorAll('.contact__input');
-  let selector = document.querySelector("input[type='tel']");
-  let im = new Inputmask("+7 (999) 999-99-99");
-
-  im.mask(selector);
 
   contactButtons.addEventListener('click', (function () {
     contactSuccess.forEach((function (inp) {
@@ -284,16 +286,16 @@ if (document.querySelector('.js-filter-price-options')) {
         spanTag.classList.add('catalog__tag');
         let colorTag;
         switch (typeFilter) {
-          case"category":
+          case "category":
             colorTag = "--color-green";
             break;
-          case"price":
+          case "price":
             colorTag = "--color-orange";
             break;
-          case"discount":
+          case "discount":
             colorTag = "--color-violet";
             break;
-          case"color":
+          case "color":
             colorTag = "--color-grey";
             break;
         }
@@ -481,4 +483,70 @@ if (document.querySelector('.alike')) {
     }
   });
 }
+if (document.querySelector('.product__btn-sail')) {
+  const productBtnSail = document.querySelector('.product__btn-sail');
+  const buyWindow = document.querySelector('.modal__window--buy');
+  const modalShadowWindow = document.querySelector('.modal');
+  const closeModalBuy = buyWindow.querySelector('.modal__close-btn');
+  const modalContainerBuy = document.querySelector('.')
 
+  productBtnSail.addEventListener('click', (e) => {
+    e.preventDefault();
+    modalShadowWindow.classList.add('show');
+    buyWindow.classList.add('show');
+  });
+
+  closeModalBuy.addEventListener('click', () => {
+    modalShadowWindow.classList.remove('show');
+    buyWindow.classList.remove('show');
+  });
+
+  const selector = document.querySelector("input[type='tel']")
+
+  new JustValidate('.modal__form', {
+    colorWrong: '#D11616',
+    rules: {
+      name: {
+        required: true,
+        minLength: 2,
+        maxLength: 25
+      },
+      tel: {
+        required: true,
+        function: (name, value) => {
+
+          const phone = selector.inputmask.unmaskedvalue()
+          return Number(phone) && phone.length === 10
+        }
+      },
+    },
+    messages: {
+      name: {
+        required: "Недопустимый формат",
+        minLength: "Имя не может быть меньше двух символов",
+        maxLength: "Запрещено вводить более 25 символов"
+      },
+      tel: {
+        required: "Недопустимый формат",
+        function: "Здесь должно быть 10 символов"
+      },
+    },
+    submitHandler: function (thisForm) {
+      let formData = new FormData(thisForm);
+
+      let xhr = new XMLHttpRequest();
+
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+          if (xhr.status === 200) {
+            console.log('Отправлено');
+            buyWindow.classList.remove('show');
+          }
+        }
+      }
+      xhr.open('POST', 'mail.php', true);
+      xhr.send(formData);
+      thisForm.reset();
+    }
+  });
+}
