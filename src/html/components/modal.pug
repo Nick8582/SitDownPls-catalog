@@ -19,4 +19,19 @@
     .modal__window.modal__window--success
       button.modal__close-btn
         span.modal__close-icon
-      p.modal__text--success Спасибо, мы вам перезвоним!
+      p.modal__text.modal__text--success Спасибо, мы вам перезвоним!
+  .modal__container.container.modal__container--photo
+    .modal__window.modal__window--photo
+      button.modal__close-btn
+        span.modal__close-icon
+      .swiper.modal__photo-product
+        ul.swiper-wrapper.modal__photo-list
+          each photo in [1, 2, 3, 4, 5]
+            li.slide.modal__photo-slide.swiper-slide
+              img.slide__img(src=`images/product-photo-${photo}.png` alt=`Фото ${photo}`)
+      .modal__thumbs-container
+        .swiper.modal__thumbs-product
+          ul.swiper-wrapper.modal__thumbs-list
+            each photo in [1,2,3,4,5]
+              li.slide.modal__thumbs-slide.swiper-slide
+                img.slide__img.slide__img--thumbs.modal__thumbs-img(src=`images/product-photo-${photo}.png` alt=`Фото ${photo}`)

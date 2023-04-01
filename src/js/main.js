@@ -452,6 +452,61 @@ if (document.querySelector('.product')) {
       nextSlideMessage: 'Следующее фото',
     },
   })
+
+  const productPhoto = document.querySelector('.product__photo');
+  const closeModal = document.querySelector('.modal__close-btn');
+  const modalShadowWindow = document.querySelector('.modal');
+  const modalContainerPhoto = document.querySelector('.modal__container--photo');
+  const photoWindow = document.querySelector('.modal__window--photo');
+
+  productPhoto.addEventListener('click', () => {
+    console.log('click to photo');
+    modalShadowWindow.classList.add('show');
+    photoWindow.classList.add('show');
+  });
+
+  const thumbsSliderModal = new Swiper('.modal__thumbs-product', {
+    slidesPerView: 'auto',
+    slideToClickedSlide: true,
+    freeMode: true,
+    watchSlidesProgress: true,
+    a11y: {
+      slideLabelMessage: 'Миниатюра фото товара {{index}} из {{slidesLength}}',
+      prevSlideMessage: 'Предыдущие миниатюры',
+      nextSlideMessage: 'Следующие миниатюры',
+    },
+    direction: 'horizontal',
+    spaceBetween: 40,
+    breakpoints: {
+      501: {
+        spaceBetween: 10,
+        direction: 'horizontal',
+        slidesPerView: 2,
+      },
+      993: {
+        spaceBetween: 18,
+        direction: 'horizontal',
+        slidesPerView: 3,
+      },
+      1311: {
+        spaceBetween: 38,
+        direction: 'horizontal',
+        slidesPerView: 4,
+      },
+    },
+  });
+
+  new Swiper('.modal__photo-product', {
+    spaceBetween: 16,
+    thumbs: {
+      swiper: thumbsSliderModal,
+    },
+    a11y: {
+      slideLabelMessage: 'Фото товара {{index}} из {{slidesLength}}',
+      prevSlideMessage: 'Предыдущее фото',
+      nextSlideMessage: 'Следующее фото',
+    },
+  })
 }
 
 if (document.querySelector('.alike')) {
