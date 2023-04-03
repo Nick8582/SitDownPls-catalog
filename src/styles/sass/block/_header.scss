@@ -579,12 +579,9 @@
       top: 108px;
       left: 0;
       z-index: 9;
-      //padding-top: 94px;
-      //padding-left: 72px;
-      //padding-bottom: 19px;
       width: 100%;
       max-width: 100%;
-      height: 0;
+      height: 300px;
       background: $white;
       background-image: url("../images/elephant-grey.svg");
       background-repeat: no-repeat;
@@ -593,7 +590,6 @@
       visibility: hidden;
       transition: opacity $transition, visibility $transition;
       &.active {
-        height: 300px;
         opacity: 1;
         visibility: visible;
       }

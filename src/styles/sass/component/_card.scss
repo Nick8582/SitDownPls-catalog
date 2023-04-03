@@ -10,7 +10,7 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       grid-gap: 32px;
-      margin-bottom: 30px;
+      margin-bottom: 33px;
     }
 
     &--catalog {
@@ -94,16 +94,35 @@
 
   &__title {
     color: $black;
-    margin-bottom: 20px;
     max-width: 222px;
     font-weight: 400;
     @include fs24;
     padding: 0;
-    line-height: 32px;
+    line-height: 31px;
+
+    @media (max-width: $table) {
+      line-height: 30px;
+      margin-bottom: 22px;
+    }
+
+    @media (max-width: $mobile) {
+      line-height: 31px;
+    }
 
     &--rating {
       max-width: 100%;
       margin-bottom: 24px;
+      @media (max-width: $table-h) {
+        margin-bottom: 23px;
+      }
+      @media (max-width: $table) {
+        margin-bottom: 25px;
+      }
+      @media (max-width: $mobile) {
+        font-size: 16px;
+        line-height: 21px;
+        margin-bottom: 18px;
+      }
     }
   }
 
@@ -177,11 +196,6 @@
       }
     }
 
-    &__title {
-      &--rating {
-        margin-bottom: 23px;
-      }
-    }
 
     &__price {
       &-modification {
@@ -222,15 +236,6 @@
       &--rating {
         margin-bottom: 17px;
         height: 151px;
-      }
-    }
-
-    &__title {
-      line-height: 30px;
-      margin-bottom: 22px;
-
-      &--rating {
-        margin-bottom: 25px;
       }
     }
   }
@@ -282,16 +287,6 @@
 
     &__discription {
       padding: 0;
-    }
-
-    &__title {
-      line-height: 31px;
-
-      &--rating {
-        font-size: 16px;
-        line-height: 21px;
-        margin-bottom: 18px;
-      }
     }
 
     &__price {
