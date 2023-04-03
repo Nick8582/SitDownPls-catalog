@@ -309,6 +309,7 @@
     @include listReset;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   &__item {
@@ -407,6 +408,7 @@
     @include listReset;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   &__item {

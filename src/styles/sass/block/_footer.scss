@@ -35,6 +35,7 @@
 .social {
   @include listReset;
   display: flex;
+  flex-wrap: wrap;
 
   &__link {
     color: $gray;
