@@ -1,6 +1,13 @@
 .breadcrumbs {
   margin-bottom: 30px;
   padding-top: 2px;
+  @media (max-width: $table-h) {
+    margin-bottom: 23px;
+    padding-top: 5px;
+  }
+  @media (max-width: $mobile) {
+    display: none;
+  }
   &__list {
     @include listReset;
     display: flex;
@@ -26,18 +33,5 @@
   &__link {
     color: inherit;
     font-size: 14px;
-  }
-}
-
-@media (max-width: $table-h) {
-  .breadcrumbs {
-    margin-bottom: 23px;
-    padding-top: 5px;
-  }
-}
-
-@media (max-width: $mobile) {
-  .breadcrumbs {
-    display: none;
   }
 }

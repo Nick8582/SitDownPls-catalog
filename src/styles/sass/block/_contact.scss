@@ -1,7 +1,18 @@
 .contact {
   margin-bottom: 72px;
+  @media (max-width: $mobile) {
+    margin-bottom: 70px;
+  }
   &__container {
-    background: url('../images/contact-background.png') right 2% center no-repeat;
+    background: url("../images/contact-background.png") right 2% center
+      no-repeat;
+    @media (max-width: $table-h) {
+      background: url("../images/contact-background-1024.png") right 7% center
+        no-repeat;
+    }
+    @media (max-width: $table) {
+      display: none;
+    }
   }
   &__title {
     margin-bottom: 9px;
@@ -13,6 +24,13 @@
     font-size: 14px;
     line-height: 19px;
     color: $gray-shade;
+    @media (max-width: $table-h) {
+      max-width: 406px;
+      margin-bottom: 16px;
+    }
+    @media (max-width: $mobile) {
+      margin-bottom: 15px;
+    }
   }
   &__tooltip {
     border-radius: 50%;
@@ -40,14 +58,30 @@
   }
   &__form {
     max-width: 625px;
+    @media (max-width: $table-h) {
+      max-width: 405px;
+    }
+    @media (max-width: $table) {
+      max-width: 405px;
+    }
   }
   &__btn {
     max-width: 159px;
     padding: 16px 0;
     margin-bottom: 13px;
+    @media (max-width: $table-h) {
+      padding-bottom: 15px;
+    }
+    @media (max-width: $mobile) {
+      padding: 16px 0 15px;
+    }
   }
   &__label {
     font-size: 14px;
+    @media (max-width: $mobile) {
+      padding-top: 2px;
+      font-size: 12px;
+    }
   }
   &__link {
     text-decoration: underline;
@@ -89,64 +123,10 @@
 
     &-field {
       border: 1px solid $red !important;
-      color: $black !important
+      color: $black !important;
     }
   }
   &-success {
     border-color: $green;
-  }
-}
-
-@media (max-width: $table-h) {
-  .contact {
-    &__container {
-      background: url('../images/contact-background-1024.png') right 7% center no-repeat;
-    }
-    &__description {
-      max-width: 406px;
-      margin-bottom: 16px;
-    }
-    &__form {
-      max-width: 405px;
-    }
-    &__btn {
-      padding-bottom: 15px;
-    }
-  }
-}
-
-@media (max-width: $table) {
-  .contact {
-    &__container {
-      background: url("../images/contact-background-768.png") right 13% center no-repeat;
-      background-size: 24%;
-    }
-    &__form {
-      max-width: 405px;
-    }
-  }
-}
-
-@media (max-width: $table) {
-  .contact {
-    &__container {
-      background: none;
-    }
-  }
-}
-
-@media (max-width: $mobile) {
-  .contact {
-    margin-bottom: 70px;
-    &__description {
-      margin-bottom: 15px;
-    }
-    &__btn {
-      padding: 16px 0 15px;
-    }
-    &__label {
-      padding-top: 2px;
-      font-size: 12px;
-    }
   }
 }

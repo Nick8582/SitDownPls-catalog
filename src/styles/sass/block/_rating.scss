@@ -8,63 +8,40 @@
       height: 125px;
       object-fit: contain;
       object-position: bottom;
+      @media (max-width: $table-h) {
+        margin-bottom: 16px;
+      }
+      @media (max-width: $table) {
+        margin-bottom: 20px;
+      }
+      @media (max-width: $mobile) {
+        height: 73px;
+        object-position: center;
+        margin-bottom: 1px;
+      }
     }
   }
   &__title {
     grid-column-start: 1;
     grid-column-end: 4 span;
     margin-bottom: 27px;
+    @media (max-width: $table) {
+      margin-bottom: 28px;
+    }
+    @media (max-width: $mobile) {
+      margin-bottom: 27px;
+    }
   }
   &__btn {
     max-width: 296px;
     margin: 0 auto;
     @include pv19;
-  }
-}
-
-@media (max-width: $table-h) {
-  .rating {
-    &__btn {
+    @media (max-width: $table-h) {
       padding: 19px 0;
     }
-    &__cards {
-      .card__img {
-        margin-bottom: 16px;
-      }
-    }
-  }
-}
-
-@media (max-width: $table) {
-  .rating {
-    &__cards {
-      .card__img {
-        margin-bottom: 20px;
-      }
-    }
-
-    &__title {
-      margin-bottom: 28px;
-    }
-    &__btn {
-      @include pv19;
-      &-card {
+    &-card {
+      @media (max-width: $table) {
         @include pv10;
-      }
-    }
-  }
-}
-
-@media (max-width: $mobile) {
-  .rating {
-    &__title {
-      margin-bottom: 27px;
-    }
-    &__cards {
-      .card__img {
-        height: 73px;
-        object-position: center;
-        margin-bottom: 1px;
       }
     }
   }
