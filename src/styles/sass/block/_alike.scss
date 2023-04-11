@@ -15,7 +15,7 @@
     font-size: 24px;
     letter-spacing: .4px;
     line-height: 1.3;
-    @media (max-width: $media) {
+    @media (max-width: $mobile) {
       grid-column: 1/3;
     }
   }
