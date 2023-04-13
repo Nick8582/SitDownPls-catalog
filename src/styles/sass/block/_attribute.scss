@@ -19,7 +19,7 @@
     border-bottom: 1px dotted $gray;
     margin: 0 5px;
     transform: translateY(-2px);
-    @media screen {
+    @media (max-width: $mobile) {
       display: none;
     }
   }

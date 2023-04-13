@@ -25,6 +25,7 @@
     align-items: flex-start;
   }
   &__title {
+    margin: 0;
     margin-bottom: 23px;
     @media (max-width: $table-h) {
       margin-right: 43px;

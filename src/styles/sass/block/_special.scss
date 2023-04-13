@@ -19,6 +19,7 @@
   }
 
   &__title {
+    margin: 0;
     grid-area: title;
     @media (max-width: $mobile) {
       margin-bottom: 27px;
